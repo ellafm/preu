@@ -1,0 +1,934 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Basic algebra &#8212; PreU Mathematics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'files/algebra';</script>
+    <link rel="shortcut icon" href="../_static/one.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Basic geometry" href="trig.html" />
+    <link rel="prev" title="Introduction" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/one.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/one.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Basic algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trig.html">2. Basic geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pfrac.html">3. Rational fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plots.html">4. Plotting stuff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcr.html">5. Circuit problem</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Basic algebra</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roots-of-polynomials">1.1. Roots of polynomials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#completing-the-square">1.2. Completing the square</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binomial-expansion">1.3. Binomial expansion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pascals-triangle">1.3.1. Pascal’s triangle</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="basic-algebra">
+<h1><span class="section-number">1. </span>Basic algebra<a class="headerlink" href="#basic-algebra" title="Permalink to this heading">#</a></h1>
+<p>In this chapter, we look at some of the ideas and techniques that are needed to work with polynomials. Even in cases where students come to university with strong grades in mathematics, we find that these are areas that often neglected areas of preparation that let students down when attempting to solve harder problems that require algebraic manipulation. All of the mathematics covered in this chapter will be required in later work.</p>
+<p>After completing the chapter you should be able to:</p>
+<ul class="simple">
+<li><p>understand what is meant by the terms “root” and “factor”, and how the multiplicity of a root corresponds to the plotted shape of a polynomial.</p></li>
+<li><p>complete the square for a quadratic and use this method to find roots and turning points.</p></li>
+<li><p>expand a binomial <span class="math notranslate nohighlight">\((x+y)^n\)</span>, where <span class="math notranslate nohighlight">\(n\)</span> is a counting number</p></li>
+</ul>
+<section id="roots-of-polynomials">
+<h2><span class="section-number">1.1. </span>Roots of polynomials<a class="headerlink" href="#roots-of-polynomials" title="Permalink to this heading">#</a></h2>
+<p>A “root” of a polynomial <span class="math notranslate nohighlight">\(p(x)\)</span> is a solution to the problem <span class="math notranslate nohighlight">\(p(x)=0\)</span>. These are the points where a plot of the polynomial meets the <span class="math notranslate nohighlight">\(x\)</span>-axis. For example, the polynomial shown in the figure below has two roots and therefore the curve meets the axis twice.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/53358214eef5aa0157968429fdc0049bc2bad893f7a409316f069d5f776a5fb5.png" src="../_images/53358214eef5aa0157968429fdc0049bc2bad893f7a409316f069d5f776a5fb5.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">The polynomial <span class="math notranslate nohighlight">\(p(x)=x^2-3x+2\)</span> has two roots, which are <span class="math notranslate nohighlight">\(x=1,2\)</span>.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>If <span class="math notranslate nohighlight">\(x_*\)</span> is a root of a polynomial then <span class="math notranslate nohighlight">\((x-x_*)\)</span> is a factor, so the quadratic plotted above can be factorised as follows:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-99ae5d5b-ddf0-49b3-a435-e2baf54a685b">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-99ae5d5b-ddf0-49b3-a435-e2baf54a685b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+x^2-3x+2=(x-1)(x-2)
+\end{equation}\]</div>
+<p>A polynomial of degree <span class="math notranslate nohighlight">\(n\)</span> can have at most <span class="math notranslate nohighlight">\(n\)</span> distinct roots. This can be understood by expanding out a product of factors:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4d97f9af-47be-40de-97ed-38476f05a560">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-4d97f9af-47be-40de-97ed-38476f05a560" title="Permalink to this equation">#</a></span>\[\begin{equation}
+(x-x_1)(x-x_2)\dots(x-x_n) = x^n+\dots
+\end{equation}\]</div>
+<p>However, a polynomial can have fewer roots than this maximum number. For example, there is no number that satisfies <span class="math notranslate nohighlight">\(x^2+1=0\)</span>. The graph of this function lies everywhere above the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
+<div class="readmore admonition">
+<p class="admonition-title">Complex numbers</p>
+<p>There is a branch of mathematics called complex number theory that supposes a solution to the problem <span class="math notranslate nohighlight">\(x^2=1\)</span> exists, in the form of an “imaginary number”. This starting assumption can be used to derive a whole host of interesting and useful mathematics, including a link between the exponential and trigonometric functions.</p>
+</div>
+<p>A polynomial can also have fewer distinct roots if some of the roots are repeated. For example, the quadratic plotted below has only one root, which appears as a quadratic factor. Since the polynomial does not change sign at this point, the curve does not cross the axis:</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/65fcd5f440f46304e6ae23dcdc3c794fe3403bc8ddabcfbc5d3e4bbb4038d2e0.png" src="../_images/65fcd5f440f46304e6ae23dcdc3c794fe3403bc8ddabcfbc5d3e4bbb4038d2e0.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">The polynomial <span class="math notranslate nohighlight">\(p(x)=x^2-2x+1\)</span> has one root.<br>It can be factorised to <span class="math notranslate nohighlight">\(p(x)=(x-1)^2\)</span></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The number of times that a factor associated with a root appears in the full factorisation of a polynomial is called the multiplicity of the root. For example, the following polynomial has a root <span class="math notranslate nohighlight">\(x=0\)</span> with multiplicity 3 and a root <span class="math notranslate nohighlight">\(x=-1\)</span> with multiplicity 2</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4d7c8f27-eaed-4cfc-9c9c-b777509e65bf">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-4d7c8f27-eaed-4cfc-9c9c-b777509e65bf" title="Permalink to this equation">#</a></span>\[\begin{equation}
+x^3(x+1)^2=x^5+2x^4+x^3
+\end{equation}\]</div>
+<p>Since the root <span class="math notranslate nohighlight">\(x=0\)</span> has odd multiplicity, the polynomial changes sign at this point and so the curve crosses the axis there. Since the root <span class="math notranslate nohighlight">\(x=1\)</span> has even multiplicity, the polynomial does not cross the curve at this point.</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/36b045dd02fc8fbc45fa7082ec09f632350088ac3870e2341b2a989c820b89c6.png" src="../_images/36b045dd02fc8fbc45fa7082ec09f632350088ac3870e2341b2a989c820b89c6.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.3 </span><span class="caption-text">The polynomial <span class="math notranslate nohighlight">\(p(x)=x^5+2x^4+x^3\)</span> has two roots.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="completing-the-square">
+<h2><span class="section-number">1.2. </span>Completing the square<a class="headerlink" href="#completing-the-square" title="Permalink to this heading">#</a></h2>
+<p>When factorising quadratics we observe that in some cases we obtain a perfect square, i.e a result of the following form where <span class="math notranslate nohighlight">\(k\)</span> is a constant:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4db305df-6e40-4933-8923-8306566c2cae">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-4db305df-6e40-4933-8923-8306566c2cae" title="Permalink to this equation">#</a></span>\[\begin{equation}
+(x+k)^2 = x^2+2kx+k^2
+\end{equation}\]</div>
+<p>We may represent this result graphically by dissecting a square with sides <span class="math notranslate nohighlight">\(x+k\)</span>, as shown below:</p>
+<a class="reference internal image-reference" href="../_images/simple_square.png"><img alt="exp-box" class="align-center" src="../_images/simple_square.png" style="width: 200px;" /></a>
+<p><br></br></p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Examples</p>
+<p>The following equation is observed to be a perfect square by taking <span class="math notranslate nohighlight">\(k=3\)</span></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+x^2+6x+9 = (x+3)^2
+\end{equation*}\]</div>
+<p>The following equation differs from a perfect square by only a constant:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+x^2+6x+5 = (x+3)^2-4
+\end{equation*}\]</div>
+</div>
+<p>If we start with a perfect square and multiply by a constant and/or add a constant, we will obtain another quadratic, which generally will not be a perfect square:</p>
+<div class="math notranslate nohighlight" id="equation-comp-sq">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-comp-sq" title="Permalink to this equation">#</a></span>\[a(x+k)^2+m = ax^2+2akx +(ak^2+m)\]</div>
+<p>The converse is also true. If we start with any quadratic equation, we can convert it to the form shown on the left hand side of <a class="reference internal" href="#equation-comp-sq">(1.5)</a> by choosing appropriate values of <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\(m\)</span>. This is called “completing the square”. We find that:</p>
+<div class="math notranslate nohighlight" id="equation-complete-sq">
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-complete-sq" title="Permalink to this equation">#</a></span>\[ax^2+bx+c = a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a}\]</div>
+<div class="exercise admonition" id="files/algebra-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.1 </span></p>
+<section id="exercise-content">
+<p>Complete the square for each of the following cases:<br>
+(a) <span class="math notranslate nohighlight">\(2x^2+6x+10\)</span><br>
+(b) <span class="math notranslate nohighlight">\(3x^2+4x-5\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>(a)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+2(x^2+3x+5) &amp;= 2\left(x+\frac{3}{2}\right)^2 -\frac{9}{2}+\frac{20}{2} \\
+&amp;= 2\left(x+\frac{3}{2}\right)^2+\frac{11}{2}
+\end{align*}\]</div>
+<p>(b)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+3x^2+4x-5 &amp;= 3\left(x+\frac{2}{3}\right)^2 - \frac{4}{3}-\frac{15}{3} \\
+&amp;= 3\left(x+\frac{2}{3}\right)^2 - \frac{19}{3}
+\end{align*}\]</div>
+</div>
+<p><br><strong>Roots</strong><br>
+Completing the square gives us the famous quadratic formula for the roots. Setting the quadratic equal to zero gives</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ade501dc-8a3a-44e3-95cb-3ffbc89a5755">
+<span class="eqno">(1.7)<a class="headerlink" href="#equation-ade501dc-8a3a-44e3-95cb-3ffbc89a5755" title="Permalink to this equation">#</a></span>\[\begin{align}
+a\left(x+\frac{b}{2a}\right) = \frac{b^2-4ac}{4a} \qquad \implies \qquad x=-\frac{b}{2a}\pm \frac{\sqrt{b^2-4ac}}{2a}
+\end{align}\]</div>
+<p>We can see from the quadratic formula that the number of roots of this equation depends on the value of the <em>discriminant</em></p>
+<div class="amsmath math notranslate nohighlight" id="equation-80e40df3-5a9e-458d-ba0b-cff5eba9062a">
+<span class="eqno">(1.8)<a class="headerlink" href="#equation-80e40df3-5a9e-458d-ba0b-cff5eba9062a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\Delta = b^2-4ac
+\end{equation}\]</div>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\Delta&gt;0\)</span> the problem has two real roots</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\Delta=0\)</span> the problem has one (repeated) real root</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\Delta&lt;0\)</span> the problem has no real roots</p></li>
+</ul>
+<p><br><strong>Turning point</strong><br>
+The completed square form <a class="reference internal" href="#equation-complete-sq">(1.6)</a> also allows us to find the minimum/maximum of the quadratic, by observing that the squared factor is minimised when it is equal to zero. This occurs at the point</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b5c2f688-6d5c-4f25-a8c0-799ab39368ab">
+<span class="eqno">(1.9)<a class="headerlink" href="#equation-b5c2f688-6d5c-4f25-a8c0-799ab39368ab" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\left(-\frac{b}{2a},\frac{4ac-b^2}{4a}\right)
+\end{equation}\]</div>
+<p>If <span class="math notranslate nohighlight">\(a&gt;0\)</span> the point is a minimum, and if <span class="math notranslate nohighlight">\(a&lt;0\)</span> then it is a maximum.</p>
+<div class="exercise admonition" id="files/algebra-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.2 </span></p>
+<section id="exercise-content">
+<p>Find the minimum/maximum of each of the following quadratics:<br>
+(a) <span class="math notranslate nohighlight">\(2x^2+6x+10\)</span><br>
+(b) <span class="math notranslate nohighlight">\(3x^2+4x-5\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>We completed the square for each of these expressions in the first exercise.<br>
+(a) <span class="math notranslate nohighlight">\(\left(\frac{-3}{2},\frac{11}{2}\right)\)</span> is a min<br>
+(b) <span class="math notranslate nohighlight">\(\left(\frac{-2}{3},\frac{-19}{3}\right)\)</span> is a min</p>
+</div>
+</section>
+<section id="binomial-expansion">
+<h2><span class="section-number">1.3. </span>Binomial expansion<a class="headerlink" href="#binomial-expansion" title="Permalink to this heading">#</a></h2>
+<p>A binomial is a polynomial with two terms.
+Binomial expansion refers to computing powers of binomials <span class="math notranslate nohighlight">\((x+y)^n\)</span>. In this section we will investigate only the case where n is a non-negative integer (counting number).
+We can compute the first few cases easily by hand:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-94affdb9-a481-414f-b4f3-9b46fe82d4f1">
+<span class="eqno">(1.10)<a class="headerlink" href="#equation-94affdb9-a481-414f-b4f3-9b46fe82d4f1" title="Permalink to this equation">#</a></span>\[\begin{align}
+(x+y)^0 &amp;= 1\\
+(x+y)^1 &amp;= x+y\\
+(x+y)^2 &amp;= x^2+2xy+y^2\\
+(x+y)^3 &amp;= x^3+3x^2 y+3xy^2+y^3\\
+&amp;\dots
+\end{align}\]</div>
+<p>You can see symmetry and patterns in the polynomials on the right hand side of the expansions. For instance, the combined powers are equal to the power of expansion <span class="math notranslate nohighlight">\(n\)</span> and the total number of terms is <span class="math notranslate nohighlight">\((n+1)\)</span>. The general form of the expansion is shown below, where <span class="math notranslate nohighlight">\(c_0,c_1,\dots, c_n\)</span> are coefficients:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a512977c-ed29-450f-ba82-1a32ec8e4fc1">
+<span class="eqno">(1.11)<a class="headerlink" href="#equation-a512977c-ed29-450f-ba82-1a32ec8e4fc1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+(x+y)^n = c_0 x^0 y^n+c_1 x^1 y^{n-1}+\dots+c_n x^n y^0
+\end{equation}\]</div>
+<p>The exponents in each expansion term add up to <span class="math notranslate nohighlight">\(n\)</span> because we multiply together one element from every bracket in the expression <span class="math notranslate nohighlight">\((x+y)(x+y)...(x+y)\)</span>. The coefficients are determined by the number of different ways that the elements can be combined.</p>
+<p>For example, let’s consider the coefficient of <span class="math notranslate nohighlight">\(x^4 y^2\)</span> in the expansion of <span class="math notranslate nohighlight">\((x+y)^6\)</span>. We need to find the number of ways of selecting four <span class="math notranslate nohighlight">\(x\)</span> values and two <span class="math notranslate nohighlight">\(y\)</span> values from the six brackets. It may be helpful to imagine the identical problem of picking exactly 4 blue balls and two red balls from six bins that each contain one blue and one red ball. The field of mathematics that considers problems of this type is called <em>combinatorics</em>.</p>
+<p>The number of ways of choosing four items from 6 bins, regardless of ordering is given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f340b566-4559-48c3-bfcf-5d29672e48c7">
+<span class="eqno">(1.12)<a class="headerlink" href="#equation-f340b566-4559-48c3-bfcf-5d29672e48c7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{6\times 5\times 4 \times 3}{4\times 3\times 2\times 1} = 15
+\end{equation}\]</div>
+<p>Can you figure out how this result is determined? The dropdown below provides an outline.</p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">See details</p>
+<p>Let’s start by selecting four of the six brackets to draw an <span class="math notranslate nohighlight">\(x\)</span> from. Since we take only one term from each bracket, the number of ways to do this is given by <span class="math notranslate nohighlight">\(6\times 5\times 4 \times 3\)</span>.</p>
+<p>However, some of these choices are equivalent. For example, picking <span class="math notranslate nohighlight">\(x\)</span> from bracket 1 and bracket 3 is equivalent to picking <span class="math notranslate nohighlight">\(x\)</span> from bracket 3 and bracket 1. For four items the number of possible orderings is <span class="math notranslate nohighlight">\(4\times 3\times 2\times 1\)</span>.</p>
+<p>The total number of uniques possibilities is therefore given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{6\times 5\times 4 \times 3}{4\times 3\times 2\times 1} = 15
+\end{equation*}\]</div>
+<p>You may be wondering about why we didn’t seem to account for the number of ways of choosing the <span class="math notranslate nohighlight">\(y\)</span> values. After dealing with the choice and ordering of 4 <span class="math notranslate nohighlight">\(x\)</span> values from 6 brackets we are left with the requirement to choose two <span class="math notranslate nohighlight">\(y\)</span> values from two brackets, regardless of ordering. There is only one way of doing this!</p>
+</div>
+<p>According to this combinatorial analysis, the <span class="math notranslate nohighlight">\(k\)</span>th coefficient in the binomial expansion is given by the result below, in which ! represents the <a class="reference external" href="https://en.wikipedia.org/wiki/Factorial">factorial</a>.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e043de21-ab6d-461f-98d0-77140be79f6f">
+<span class="eqno">(1.13)<a class="headerlink" href="#equation-e043de21-ab6d-461f-98d0-77140be79f6f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+c_k = n\text{C}k = \begin{pmatrix}n\\k\end{pmatrix}=\frac{n!}{k!(n-k)!}
+\end{equation}\]</div>
+<p>For example, substituting <span class="math notranslate nohighlight">\(n=6\)</span> and <span class="math notranslate nohighlight">\(k=4\)</span> gives the result</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5d635110-d5a7-4c6a-b2ea-3e3e052b6b55">
+<span class="eqno">(1.14)<a class="headerlink" href="#equation-5d635110-d5a7-4c6a-b2ea-3e3e052b6b55" title="Permalink to this equation">#</a></span>\[\begin{equation}
+6\text{C}4=\begin{pmatrix}6\\4\end{pmatrix}=\frac{6!}{4!2!}=\frac{6\times 5\times 4\times 3\times 2\times 1}{(4\times 3\times 2\times 1)(2\times 1)}
+\end{equation}\]</div>
+<p>It can also be observed from this result that</p>
+<div class="amsmath math notranslate nohighlight" id="equation-581cc4ae-ee40-4543-b7f5-3df7eca74cb3">
+<span class="eqno">(1.15)<a class="headerlink" href="#equation-581cc4ae-ee40-4543-b7f5-3df7eca74cb3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\begin{pmatrix}n\\k\end{pmatrix}= \begin{pmatrix}n\\n-k\end{pmatrix}
+\end{equation}\]</div>
+<p>For example, <span class="math notranslate nohighlight">\(6\text{C}4 = 6\text{C}2\)</span>. This explains the coefficient symmetry that is observed from left to right in the binomial expansion.</p>
+<div class="exercise admonition" id="files/algebra-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.3 </span></p>
+<section id="exercise-content">
+<p>(a) Calculate <span class="math notranslate nohighlight">\((x+y)^9\)</span> using the binomial theorem<br>
+(b) Calculate the coefficient of the term <span class="math notranslate nohighlight">\(x^2y^3\)</span> in the expansion <span class="math notranslate nohighlight">\((2x-3y)^5\)</span><br>
+(c) Find the constant term in the expansion <span class="math notranslate nohighlight">\((x^2-1/x)^9\)</span><br>
+(d) Expand <span class="math notranslate nohighlight">\((1+x-x^2)^7\)</span> in ascending powers of <span class="math notranslate nohighlight">\(x\)</span> up to and including the term in <span class="math notranslate nohighlight">\(x^3\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>(a)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+(x+y)^9 &amp; = \begin{pmatrix}9\\0\end{pmatrix} x^0y^9 + \begin{pmatrix}9\\1\end{pmatrix} x^1y^8 + \begin{pmatrix}9\\2\end{pmatrix} x^2y^7 + \begin{pmatrix}9\\3\end{pmatrix} x^3y^6 + \begin{pmatrix}9\\4\end{pmatrix} x^4y^5 + \begin{pmatrix}9\\5\end{pmatrix} x^5y^4 + \begin{pmatrix}9\\6\end{pmatrix} x^6y^3 + \begin{pmatrix}9\\7\end{pmatrix} x^7y^2 + \begin{pmatrix}9\\8\end{pmatrix} x^8y^1 + \begin{pmatrix}9\\9\end{pmatrix} x^9y^0\\
+&amp; = x^9 + 9x^8 y +36x^7 y^2 +84x^6y^3+126x^5y^4+126x^5y^4+84x^3y^6+36x^2y^7+9xy^8+y^9 
+\end{align*}\]</div>
+<p>(b) The term in <span class="math notranslate nohighlight">\(x^2y^3\)</span> is given by <span class="math notranslate nohighlight">\(5\text{C}2\ (2x)^2(-3y)^3 = 10(2^2)(-3)^3x^2y^3\)</span><br>
+The coefficient is -1080<br></p>
+<p>(c) The <span class="math notranslate nohighlight">\(k\)</span>th term in the expansion is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+9\text{C}k \ (x^2)^k(-x^{-1})^{9-k} =9\text{C}k \ (-1)^{9-k} x^{2k}x^{k-9} = 9\text{C}k \ (-1)^{9-k} x^{3k-9}  
+\end{equation*}\]</div>
+<p>The constant term is given by <span class="math notranslate nohighlight">\(k=3\)</span>, with coefficient <span class="math notranslate nohighlight">\(9\text{C}3 \ (-1)^6 =84\)</span><br></p>
+<p>(d)</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+(1+x-x^2)^7 &amp;= \biggr(1+(x-x^2)\biggr)^7 = 1+7(x-x^2)+\begin{pmatrix}7\\2\end{pmatrix}(x-x^2)^2+\begin{pmatrix}7\\3\end{pmatrix}(x-x^2)^3+\dots\\
+&amp;=1+7x-7x^2+21(x^2-2x^3+\dots)+35(x^3+\dots)+\dots\\
+&amp;=1+7x+14x^2-7x^3+\dots
+\end{align*}\]</div>
+</div>
+<section id="pascals-triangle">
+<h3><span class="section-number">1.3.1. </span>Pascal’s triangle<a class="headerlink" href="#pascals-triangle" title="Permalink to this heading">#</a></h3>
+<p>As an introduction to this section, try to prove the following result</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e89ed24d-7173-4903-b1e3-2a02b42bae90">
+<span class="eqno">(1.16)<a class="headerlink" href="#equation-e89ed24d-7173-4903-b1e3-2a02b42bae90" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\begin{pmatrix}n+1\\k\end{pmatrix} = \begin{pmatrix}n\\k\end{pmatrix} + \begin{pmatrix}n\\k-1\end{pmatrix}  
+\end{equation}\]</div>
+<div class="dropdown solution admonition">
+<p class="admonition-title">Solution</p>
+<p>It is easiest to start by writing out the result for the right hand side, which gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\begin{pmatrix}n\\k\end{pmatrix} + \begin{pmatrix}n\\k-1\end{pmatrix} =\frac{n!}{(n-k)!k!}+{n!}{(n-k+1)!(k-1)!} 
+\end{equation*}\]</div>
+<p>Putting both terms over a common denominator gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{n!(n-k+1)}{(n-k+1)!(k-1)!}+\frac{n!k}{(n-k+1)!k!}=\frac{n!(n-k+1+k)}{(n-k+1)!k!}=\frac{(n+1)!}{(n-k+1)!k!}
+\end{equation*}\]</div>
+<p>This result is equal to the left hand side of the expression that we set out to prove.</p>
+</div>
+<p>This is an example of a <em>recursive</em> formula, since it gives us the coefficients of the <span class="math notranslate nohighlight">\((n+1)\)</span>th power binomial in terms of the coefficients of the <span class="math notranslate nohighlight">\(n\)</span>th power binomial. Therefore the coefficients of each power can be written out successively, as shown in the table below.</p>
+<p>The left-most and right-most values in each row are filled out according to the result</p>
+<div class="amsmath math notranslate nohighlight" id="equation-96f53d54-24b3-43e4-97d3-6fefd7566a88">
+<span class="eqno">(1.17)<a class="headerlink" href="#equation-96f53d54-24b3-43e4-97d3-6fefd7566a88" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\begin{pmatrix}n\\0\end{pmatrix}=\begin{pmatrix}n\\n\end{pmatrix}=1
+\end{equation}\]</div>
+<p>The remaining values are then filled out row by row, by using the recursive formula. Each value is calculated by adding the two values from the row above that are in the same column and the preceding column.</p>
+<table class="no-border table" id="id4">
+<caption><span class="caption-number">Table 1.1 </span><span class="caption-text">Pascal’s triangle</span><a class="headerlink" href="#id4" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=0\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=1\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=2\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=3\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=4\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=5\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=6\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=7\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=8\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=9\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k=10\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n=0\)</span></p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n=1\)</span></p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n=2\)</span></p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n=3\)</span></p></td>
+<td><p>1</p></td>
+<td><p>3</p></td>
+<td><p>3</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n=4\)</span></p></td>
+<td><p>1</p></td>
+<td><p>4</p></td>
+<td><p>6</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n=5\)</span></p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+<td><p>10</p></td>
+<td><p>10</p></td>
+<td><p>5</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n=6\)</span></p></td>
+<td><p>1</p></td>
+<td><p>6</p></td>
+<td><p>15</p></td>
+<td><p>20</p></td>
+<td><p>15</p></td>
+<td><p>6</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n=7\)</span></p></td>
+<td><p>1</p></td>
+<td><p>7</p></td>
+<td><p>21</p></td>
+<td><p>35</p></td>
+<td><p>35</p></td>
+<td><p>21</p></td>
+<td><p>7</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n=8\)</span></p></td>
+<td><p>1</p></td>
+<td><p>8</p></td>
+<td><p>28</p></td>
+<td><p>56</p></td>
+<td><p>70</p></td>
+<td><p>56</p></td>
+<td><p>28</p></td>
+<td><p>8</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(n=9\)</span></p></td>
+<td><p>1</p></td>
+<td><p>9</p></td>
+<td><p>36</p></td>
+<td><p>84</p></td>
+<td><p>126</p></td>
+<td><p>126</p></td>
+<td><p>84</p></td>
+<td><p>36</p></td>
+<td><p>9</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(n=10\)</span></p></td>
+<td><p>1</p></td>
+<td><p>10</p></td>
+<td><p>45</p></td>
+<td><p>120</p></td>
+<td><p>210</p></td>
+<td><p>252</p></td>
+<td><p>210</p></td>
+<td><p>120</p></td>
+<td><p>45</p></td>
+<td><p>10</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="trig.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Basic geometry</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roots-of-polynomials">1.1. Roots of polynomials</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#completing-the-square">1.2. Completing the square</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binomial-expansion">1.3. Binomial expansion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pascals-triangle">1.3.1. Pascal’s triangle</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ella Metcalfe
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

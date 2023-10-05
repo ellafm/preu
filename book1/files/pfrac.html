@@ -1,0 +1,766 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Rational fractions &#8212; PreU Mathematics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'files/pfrac';</script>
+    <link rel="shortcut icon" href="../_static/one.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Plotting stuff" href="plots.html" />
+    <link rel="prev" title="2. Basic geometry" href="trig.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/one.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/one.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="algebra.html">1. Basic algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trig.html">2. Basic geometry</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Rational fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plots.html">4. Plotting stuff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcr.html">5. Circuit problem</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Rational fractions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-fractions">3.1. Partial fractions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proper-fractions">3.2. Proper fractions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improper-fractions">3.3. Improper fractions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="rational-fractions">
+<h1><span class="section-number">3. </span>Rational fractions<a class="headerlink" href="#rational-fractions" title="Permalink to this heading">#</a></h1>
+<p>A rational fraction is fraction where both the numerator and denominator are polynomials. Expressions of this type appear very frequently in science and mathematics, since polynomials are often used to approximate the behaviour of other functions over a range of values.</p>
+<p>After completing this chapter you should be able to:</p>
+<ul class="simple">
+<li><p>distinguish between proper and improper rational fractions</p></li>
+<li><p>fully decompose rational fractions into simpler “partial fraction” form</p></li>
+</ul>
+<section id="partial-fractions">
+<h2><span class="section-number">3.1. </span>Partial fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this heading">#</a></h2>
+<p>Composing fractions means putting everything together over a common denominator. For example:</p>
+<div class="math notranslate nohighlight" id="equation-pfrac1">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-pfrac1" title="Permalink to this equation">#</a></span>\[\frac{2}{x+1}+\frac{3}{x+2} = \frac{2(x+2)+3(x+1)}{(x+1)(x+2)}=\frac{5x+7}{x^2+3x+2}\]</div>
+<p>Decomposition is the reverse process, i.e taking the fraction apart. The simpler fractions that arise from this process are called partial fractions. Although modern computer software or online tools such as <a class="reference external" href="https://www.wolframalpha.com/">Wolfram Alpha</a> can do this for us, it may be helpful to understand a little about how it works.</p>
+<p>Our main decomposition technique involves “guessing” the form by spotting common patterns. For example, we may observe that a product of factors in the denominator is obtained by adding fractions involving those factors, as in example <a class="reference internal" href="#equation-pfrac1">(3.1)</a>. This may lead us to anticipate a result of the following form, where constants <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are unknown:</p>
+<div class="math notranslate nohighlight" id="equation-pfrac2">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-pfrac2" title="Permalink to this equation">#</a></span>\[\frac{5x+7}{(x+1)(x+2)} = \frac{A}{x+1}+\frac{B}{x+2}\]</div>
+<p>We can find the unknown values by comparing the target fraction to our guess. We do this by composing our guess and matching the numerators. In our example case we obtain the following by composing the right hand side:</p>
+<div class="math notranslate nohighlight" id="equation-pfrac3">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-pfrac3" title="Permalink to this equation">#</a></span>\[\frac{A(x+2)+B(x+1)}{(x+1)(x+2)}=\frac{(A+B)x+(2A+B)}{(x+1)(x+2)}\]</div>
+<p>There are two techniques that we may then use for matching the numerators:</p>
+<p><strong>Equating coefficients</strong><br>
+Comparing coefficients of each power of <span class="math notranslate nohighlight">\(x\)</span> to our target fraction gives conditions for the unknown constants. In this case,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+(A+B)x+(2A+B) = 5x+7 \quad \implies \quad \begin{array}{ll}A+B&amp;=5\\ 2A+B&amp;=7\end{array}
+\end{equation*}\]</div>
+<p>The unique values of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> satisfying both relationships are <span class="math notranslate nohighlight">\(A=2,\)</span> <span class="math notranslate nohighlight">\(B=3\)</span>.</p>
+<div class="exercise admonition" id="pfrac-ex1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.1 </span></p>
+<section id="exercise-content">
+<p>Find the values of <span class="math notranslate nohighlight">\(A,B,C,D\)</span> that make the following relationship true:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{x^3}{(x-1)^2}= Ax+B + \frac{C}{(x-1)}+\frac{D}{(x-1)^2}
+\end{equation*}\]</div>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>Composing the RHS gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+Ax+B + \frac{C}{(x-1)}+\frac{D}{(x-1)^2}=\frac{(Ax+B)(x-1)^2+C(x-1)+D}{(x-1)^2}
+\end{equation*}\]</div>
+<p>Expanding the numerator gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+Ax^3+(B-2A)x^2+(A-2B+C)x+(B-C+D)
+\end{equation*}\]</div>
+<p>For terms to match with <span class="math notranslate nohighlight">\(x^3\)</span> we require <span class="math notranslate nohighlight">\(A=1\)</span>, <span class="math notranslate nohighlight">\(B=2\)</span>, <span class="math notranslate nohighlight">\(C=3\)</span>, <span class="math notranslate nohighlight">\(D=1\)</span>.</p>
+</div>
+<p><strong>Substituting values</strong><br>
+Since the two polynomials should be equal for all values of <span class="math notranslate nohighlight">\(x\)</span> we can choose values that give the coefficients directly. In this case,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+A(x+2)+B(x+1)=5x+7
+\end{equation*}\]</div>
+<ul class="simple">
+<li><p>choosing <span class="math notranslate nohighlight">\(x=-2\)</span> eliminates the first factor and gives <span class="math notranslate nohighlight">\(B=3\)</span></p></li>
+<li><p>choosing <span class="math notranslate nohighlight">\(x=-1\)</span> eliminates the second factor and gives <span class="math notranslate nohighlight">\(A=2\)</span></p></li>
+</ul>
+<div class="exercise admonition" id="pfrac-ex2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.2 </span></p>
+<section id="exercise-content">
+<p>Find the values of <span class="math notranslate nohighlight">\(A,B,C\)</span> that make the following relationship true:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{2}{(x^2-1)(x+2)} =\frac{A}{x+1}+\frac{B}{x-1}+\frac{C}{x+2}
+\end{equation*}\]</div>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>Composing the RHS gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{A(x-1)(x+2)+B(x+1)(x+2)+C(x+1)(x-1)}{(x^2-1)(x+2)}
+\end{equation*}\]</div>
+<ul class="simple">
+<li><p>putting <span class="math notranslate nohighlight">\(x=-1\)</span> gives <span class="math notranslate nohighlight">\(A=-1\)</span>,</p></li>
+<li><p>putting <span class="math notranslate nohighlight">\(x=1\)</span> gives <span class="math notranslate nohighlight">\(B=1/3\)</span>,</p></li>
+<li><p>putting <span class="math notranslate nohighlight">\(x=-2\)</span> gives <span class="math notranslate nohighlight">\(C=2/3\)</span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="proper-fractions">
+<h2><span class="section-number">3.2. </span>Proper fractions<a class="headerlink" href="#proper-fractions" title="Permalink to this heading">#</a></h2>
+<p>A proper rational fraction is one where the degree of the numerator is less than the degree of the denominator.</p>
+<div class="exercise admonition" id="files/pfrac-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.3 </span></p>
+<section id="exercise-content">
+<p>Which of the following are proper fractions?<br>
+(a) <span class="math notranslate nohighlight">\(\displaystyle \frac{x}{x^2+1}, \qquad\)</span>
+(b) <span class="math notranslate nohighlight">\(\displaystyle \frac{x^2}{x^2+1}\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>(a)  is a proper fraction since the numerator is degree 1 and the denominator is degree 2</p>
+<p>(b) is not a proper fraction since the numerator and denominator are both degree 2</p>
+</div>
+<p>Any distinct factors appearing in the denominator of a proper fraction can be separated. For each fraction in the decomposition the degree of the numerator should be less than the degree of the denominator.</p>
+<p><strong>Examples</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{3}{(x+2)(x+3)}&amp;=\frac{A}{x+2}-\frac{B}{x+3}\\
+\frac{x^2}{(x-1)(x^2+1)}&amp;=\frac{A}{x-1}+\frac{Bx+C}{x^2+1}
+\end{align*}\]</div>
+<div class="exercise admonition" id="pfrac-ex3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.4 </span></p>
+<section id="exercise-content">
+<p>Determine which of the following fractions can be further decomposed, and find the decomposition for those that can:<br>
+a. <span class="math notranslate nohighlight">\(\displaystyle\frac{x}{x^2-1}\quad\)</span>
+b. <span class="math notranslate nohighlight">\(\displaystyle\frac{1}{x^2-1}\quad\)</span>
+c. <span class="math notranslate nohighlight">\(\displaystyle \frac{x}{x^2+1}\quad\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>(a) <span class="math notranslate nohighlight">\(\displaystyle\frac{1}{2(x-1)}+\frac{1}{2(x+1)}\)</span><br>
+(b) <span class="math notranslate nohighlight">\(\displaystyle\frac{1}{2(x-1)}-\frac{1}{2(x+1)}\)</span><br>
+(c) Cannot be further decomposed because the denominator cannot be factorised.</p>
+</div>
+<p><br><strong>Repeated factors</strong><br>
+Sometimes you may encounter a fraction featuring a repeated factor on the denominator. If we natively attempt to treat these the same way that we handled the case of distinct factors we will run into difficulties. For example, the following result is nonsense and cannot be satisfied for any values of the constants :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5a23e423-c969-424d-87cd-837302a4bbaa">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-5a23e423-c969-424d-87cd-837302a4bbaa" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{1}{(x+1)^2}=\frac{A}{x+1}+\frac{B}{x+1}
+\end{equation}\]</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Try it!</p>
+<p>The combined fraction on the right is equal to</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{A+B}{x+1} \equiv \frac{(A+B)(x+1)}{(x+1)^2}
+\end{equation*}\]</div>
+<p>There is no combination of <span class="math notranslate nohighlight">\(A,B\)</span> values that gives a non-zero constant on the numerator.</p>
+</div>
+<p>In fact, this fraction cannot be further decomposed. On the other hand, the following proper fraction which also features a repeated factor on the denominator can be decomposed as shown:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{3x-2}{(x-1)^2} = \frac{3(x-1)+1}{(x-1)^2}=\frac{3}{x-1}+\frac{1}{(x-1)^2}.
+\end{equation*}\]</div>
+<p>In general, for each repeated factor in the denominator with multiplicity <span class="math notranslate nohighlight">\(k\)</span> we can decompose it as a sum of <span class="math notranslate nohighlight">\(k\)</span> rational fractions, each containing a different power of the factor.</p>
+<p>For example,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2c03a394-f3ef-4532-9dbc-5c55e63991e8">
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-2c03a394-f3ef-4532-9dbc-5c55e63991e8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{x}{(x+1)^3}&amp;=\frac{A}{x+1}+\frac{B}{(x+1)^2}+\frac{C}{(x+1)^3}\\
+\frac{x^3}{(x^2+1)^2}&amp; = \frac{Ax+B}{x^2+1}+\frac{Cx+D}{(x^2+1)^2}
+\end{align}\]</div>
+<div class="exercise admonition" id="pfrac-ex4">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.5 </span></p>
+<section id="exercise-content">
+<p>Determine which of the following fractions can be further decomposed, and find the decomposition for those that can:<br>
+a. <span class="math notranslate nohighlight">\(\displaystyle\frac{x}{(x-1)^2}\quad\)</span>
+b. <span class="math notranslate nohighlight">\(\displaystyle\frac{x}{(x^2+1)^2}\quad\)</span>
+c. <span class="math notranslate nohighlight">\(\displaystyle\frac{x^2}{(x^2+1)^2}\quad\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>(a) <span class="math notranslate nohighlight">\(\displaystyle\frac{1}{x-1}+\frac{1}{(x-1)^2}\)</span><br>
+(b) Cannot be further decomposed<br>
+(c) <span class="math notranslate nohighlight">\(\displaystyle\frac{1}{x^2+1}-\frac{1}{(x^2+1)^2}\)</span><br></p>
+</div>
+<p>It is essential that you make sure the denominator is factorised as far as possible before doing the decomposition. For example</p>
+<div class="amsmath math notranslate nohighlight" id="equation-831a5bf7-4a0a-4a74-8eeb-1ef2cd3f6cca">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-831a5bf7-4a0a-4a74-8eeb-1ef2cd3f6cca" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{x^2}{(x^2-1)^2}=\frac{x^2}{(x-1)^2(x+1)^2}
+\end{equation}\]</div>
+<p>Therefore the decomposition of this fraction has the form</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8d8a90de-c365-43be-ab85-d0952d5753e5">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-8d8a90de-c365-43be-ab85-d0952d5753e5" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{A}{x-1}+\frac{B}{(x-1)^2}+\frac{C}{x+1}+\frac{D}{(x+1)^2}
+\end{equation}\]</div>
+</section>
+<section id="improper-fractions">
+<h2><span class="section-number">3.3. </span>Improper fractions<a class="headerlink" href="#improper-fractions" title="Permalink to this heading">#</a></h2>
+<p>An improper rational fraction is one where the degree of the numerator is greater than or equal to the degree of the denominator.</p>
+<p>In that case we can split off a polynomial of degree <span class="math notranslate nohighlight">\((m-n)\)</span>, where <span class="math notranslate nohighlight">\(m,n\)</span> are the degrees of the numerator and denominator, respectively.</p>
+<p>The remaining proper fraction can then be further decomposed.</p>
+<p><strong>Examples</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-b5076b45-587b-477d-b1e8-355cd87908a8">
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-b5076b45-587b-477d-b1e8-355cd87908a8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{2x+3}{5x+2} =A+\frac{B}{5x+2}
+\end{equation}\]</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">explanation</p>
+<p>Here we have a ratio of two polynomials of the same order. The decomposition will feature a degree 0 polynomial, i.e. a constant.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{2x+3}{5x+2} \quad \text{is} \quad \frac{\text{degree 1}}{\text{degree 1}} \quad \implies \quad (m-n)=0
+\end{equation*}\]</div>
+</div>
+<div class="amsmath math notranslate nohighlight" id="equation-066e8489-5325-4aba-b16c-ddc014949ed6">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-066e8489-5325-4aba-b16c-ddc014949ed6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{x^2}{5x+2} =Ax+B+\frac{C}{5x+2}
+\end{equation}\]</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">explanation</p>
+<p>Here we have a ratio of two polynomials which differ by a single order. The decomposition will feature a degree 1 polynomial, i.e of the form <span class="math notranslate nohighlight">\(Ax+B\)</span>.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{x^2}{5x+2} \quad \text{is} \quad \frac{\text{degree 2}}{\text{degree 1}} \quad \implies \quad (m-n)=1
+\end{equation*}\]</div>
+</div>
+<p>The constants in each case can be found by the method of equating coefficients that we introduced in this chapter. You should find that:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8e44decd-288c-4a96-9777-77299696a3e1">
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-8e44decd-288c-4a96-9777-77299696a3e1" title="Permalink to this equation">#</a></span>\[\begin{align}
+\frac{2x+3}{5x+2} &amp;=\frac{2}{5}+\frac{11/5}{5x+2}\\
+\frac{x^2}{5x+2} &amp;=\frac{1}{5}x-\frac{2}{25}+\frac{4/25}{5x+2}
+\end{align}\]</div>
+<p>Note: we can also find these results by <a class="reference external" href="https://en.wikipedia.org/wiki/Polynomial_long_division">polynomial long division</a>:</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="math notranslate nohighlight">\(
+\require{enclose}
+\begin{array}{r r}
+&amp;\frac{2}{5} \\
+5x+2 &amp; \enclose{longdiv}{2x+3} \\
+&amp; 2x+\frac{4}{5}\\
+\hline
+&amp; \frac{11}{5}
+\end{array}
+\)</span></p>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<p><span class="math notranslate nohighlight">\(
+\require{enclose}
+\begin{array}{r r}
+&amp;\frac{1}{5}x-\frac{2}{25} \\
+5x+2 &amp; \enclose{longdiv}{x^2\phantom{+\frac{1}{5}x-\frac{2}{5}}} \\
+&amp; x^2+\frac{2}{5}x \phantom{+\frac{4}{25}}\\
+\hline
+&amp; \phantom{x^2}-\frac{2}{5}x \phantom{+\frac{4}{25}}\\
+&amp;  \phantom{x^2}-\frac{2}{5}x-\frac{4}{5}\\
+\hline
+&amp; \frac{4}{25}
+\end{array}
+\)</span></p>
+</div>
+</div>
+</div>
+<div class="exercise admonition" id="pfrac-ex5">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.6 </span></p>
+<section id="exercise-content">
+<p>Decompose the following as far as possible:
+<span class="math notranslate nohighlight">\(\displaystyle\frac{x^3}{x^2-1}\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle x+\frac{1}{2(x-1)}+\frac{1}{2(1+x)}\)</span></p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="trig.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Basic geometry</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="plots.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Plotting stuff</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-fractions">3.1. Partial fractions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proper-fractions">3.2. Proper fractions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improper-fractions">3.3. Improper fractions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ella Metcalfe
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

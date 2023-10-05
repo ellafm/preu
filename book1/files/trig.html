@@ -1,0 +1,744 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Basic geometry &#8212; PreU Mathematics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'files/trig';</script>
+    <link rel="shortcut icon" href="../_static/one.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3. Rational fractions" href="pfrac.html" />
+    <link rel="prev" title="1. Basic algebra" href="algebra.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/one.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/one.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="algebra.html">1. Basic algebra</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Basic geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pfrac.html">3. Rational fractions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plots.html">4. Plotting stuff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcr.html">5. Circuit problem</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Basic geometry</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-angles">2.1. Measuring angles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-trigonometry">2.2. Basic trigonometry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-results">2.2.1. Common results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pythagoras-theorem">2.2.2. Pythagoras’ theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-of-a-line">2.3. Equation of a line</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="basic-geometry">
+<h1><span class="section-number">2. </span>Basic geometry<a class="headerlink" href="#basic-geometry" title="Permalink to this heading">#</a></h1>
+<p>Much of the sophisticated mathematics that we use to model real phenomena is derived from the simpler mathematics of lines and angles. This chapter provides a brief outline of some based properties that we will rely on in other chapters.</p>
+<p>After completing this chapter you should be able to:</p>
+<ul class="simple">
+<li><p>use radians to measure angles, and know the relationship between radians and arc length</p></li>
+<li><p>give definitions of sine, cosine and tangent and plot graphs of <span class="math notranslate nohighlight">\(\sin\)</span>, <span class="math notranslate nohighlight">\(\cos\)</span></p></li>
+<li><p>state and use Pythagoras’ theorem</p></li>
+<li><p>find the equation of the line passing through two given points</p></li>
+</ul>
+<section id="measuring-angles">
+<h2><span class="section-number">2.1. </span>Measuring angles<a class="headerlink" href="#measuring-angles" title="Permalink to this heading">#</a></h2>
+<p>Radians are used as an alternative to degrees for measuring angles in a circle. They are almost always the best choice for mathematics due to the way that they are defined. Some commonly used mathematical results such as arc length formulae or differentiation results are only valid when the angle is measured in radians.</p>
+<p>A radian is the angle subtended by a unit of arc inscribed on the circumference of a unit circle, as illustrated in the graphic below. An angle <span class="math notranslate nohighlight">\(\theta\)</span> measured in radians is typically denoted <span class="math notranslate nohighlight">\(\theta\text{ rad}\)</span> or with a superscript “c” in the manner <span class="math notranslate nohighlight">\(\theta^c\)</span>.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/1radian.png" src="../_images/1radian.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">The definition of a radian</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Using this definition, spend a few moments thinking about an answer to the following question: “How large is 1 radian?”. Don’t use your calculator! An answer is provided below.</p>
+<div class="dropdown solution admonition">
+<p class="admonition-title">Solution</p>
+<p>The circumference of a unit circle is <span class="math notranslate nohighlight">\(2\pi\)</span>, which is a little bigger than 6. Therefore, approximately 1/6 of a circle’s circumference subtends 1 radian.</p>
+<p>When you cut your pizza into 6 pieces (which is pretty standard), the angle of each piece is approximately 1 radian!</p>
+<p>Since there are 360 degrees in a circle, the relationship between radians and degrees is given by:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+2\pi\text{ rad}=360^{\circ} \qquad \implies 1\text{ rad}=\left(\frac{180}{\pi}\right)^{\circ}
+\end{equation*}\]</div>
+</div>
+<p>The relationships between arc length <span class="math notranslate nohighlight">\(s\)</span>, radius <span class="math notranslate nohighlight">\(r\)</span> and subtended angle <span class="math notranslate nohighlight">\(\theta\)</span> are captured by the following general result, which applies only if the angle is measured in radians:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-30c0cd3d-7f69-45bc-b4fa-9b5915c6def6">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-30c0cd3d-7f69-45bc-b4fa-9b5915c6def6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+s=r \theta
+\end{equation}\]</div>
+<p>The result follows from the definition of a radian and properties of similar shapes, as illustrated by the figure below.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/rads.png" src="../_images/rads.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text"><br>[left]  :	Arc length is proportional to subtended angle in radians, by definition.<br>
+[right]:Arc length is proportional to radius, by property of similar shapes.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="exercise admonition" id="files/trig-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.1 </span></p>
+<section id="exercise-content">
+<p>Write down the length of an arc of a circle with radius 2cm which subtends an angle of 30 degrees</p>
+</section>
+</div>
+<div class="dropdown solution admonition">
+<p class="admonition-title">Solution</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+30^{\circ}=\frac{\pi}{6} \quad \implies \quad s=2\text{ cm}\frac{\pi}{6}=\frac{\pi}{3}\text{cm}
+\end{equation*}\]</div>
+</div>
+</section>
+<section id="basic-trigonometry">
+<h2><span class="section-number">2.2. </span>Basic trigonometry<a class="headerlink" href="#basic-trigonometry" title="Permalink to this heading">#</a></h2>
+<p>We now introduce the definitions of sine, cosine and tangent, which characterise the ratios of side lengths in a right-angled triangle as a function of the enclosed angle.</p>
+<p>The definitions are illustrated in the figure below. A potentially useful mnemomic for remembering these is the pretend word “SOHCAHTOA!” which recalls the following relationships:</p>
+<ul class="simple">
+<li><p>SOH: sin=opposite/hypothenuse</p></li>
+<li><p>CAH: cos=adjacent/hypothenuse</p></li>
+<li><p>TOA: tan=opposite/adjacent</p></li>
+</ul>
+<figure class="align-default" id="id3">
+<img alt="../_images/triggy.png" src="../_images/triggy.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Definitions of sine, cosine and tangent, which measure the ratios of side lengths in a right-angled triangle as a function of the enclosed angle.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Owing to the properties of similar triangles, we can investigate these relationships by inscribing a right-angled triangle inside the unit circle, so that the hypothenuse is always 1. The animation below shows how the curves for <span class="math notranslate nohighlight">\(\sin(\theta)\)</span> and <span class="math notranslate nohighlight">\(\cos(\theta)\)</span> are mapped out as the enclosed angle <span class="math notranslate nohighlight">\(\theta\)</span> is varied.</p>
+<figure class="align-default" id="id4">
+<img alt="../_images/trig_animation.gif" src="../_images/trig_animation.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">An illustration of how the sine and cosine curves are mapped out by inscribing a right-angled triangle inside a unit circle. Since the hypothenuse is one, <span class="math notranslate nohighlight">\(\cos(\theta)\)</span> is given by the triangle base (blue) and <span class="math notranslate nohighlight">\(\sin(\theta)\)</span> is given by the triangle height (red).</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In general, if we take the origin of a <span class="math notranslate nohighlight">\((x,y)\)</span> coordinate system at the centre of the circle of radius <span class="math notranslate nohighlight">\(r\)</span> then we obtain the following results, where <span class="math notranslate nohighlight">\(\theta\)</span> is measured anti-clockwise from the positive <span class="math notranslate nohighlight">\(x\)</span> axis:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-353d8a3d-c237-40c5-834e-e327e102d4be">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-353d8a3d-c237-40c5-834e-e327e102d4be" title="Permalink to this equation">#</a></span>\[\begin{equation}
+x=r\cos(\theta), \qquad y=r\sin(\theta)
+\end{equation}\]</div>
+<div class="whatis admonition">
+<p class="admonition-title">Negative angles</p>
+<p>We can measure the angle in the clockwise direction by allowing it to become negative. For example, the angle <span class="math notranslate nohighlight">\(\theta=3\pi/2\)</span> is equivalent to <span class="math notranslate nohighlight">\(\theta=-\pi/2\)</span>.<br><br>
+By convention mathematicians nearly always choose to measure angles in the range <span class="math notranslate nohighlight">\(-\pi&lt;\theta\leq \pi\)</span></p>
+</div>
+<section id="common-results">
+<h3><span class="section-number">2.2.1. </span>Common results<a class="headerlink" href="#common-results" title="Permalink to this heading">#</a></h3>
+<p>Students are commonly taught to memorise the angle results shown in the table below. These results are promptly forgotten, but fear not, for they are easily derived…</p>
+<table class="table" id="id5">
+<caption><span class="caption-number">Table 2.1 </span><span class="caption-text">sine and cosine of common angles</span><a class="headerlink" href="#id5" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(\theta\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(0^c \ (=0^{\circ})\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\pi}{6}^c \ (=30^{\circ})\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\pi}{4}^c \ (=45^{\circ})\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\pi}{3}^c \ (=60^{\circ})\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\displaystyle \frac{\pi}{2}^c \ (=90^{\circ})\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sin\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{1}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\displaystyle\frac{1}{\sqrt{2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\displaystyle\frac{\sqrt{3}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\cos\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\displaystyle\frac{\sqrt{3}}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{1}{\sqrt{2}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\displaystyle\frac{1}{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\tan\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\displaystyle\frac{1}{\sqrt{3}}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sqrt{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>We can find <span class="math notranslate nohighlight">\(\cos\)</span> and <span class="math notranslate nohighlight">\(\sin\)</span> of <span class="math notranslate nohighlight">\(\pi/4\)</span> from a right-angled triangle with unit base and height. We can find <span class="math notranslate nohighlight">\(\cos\)</span> and <span class="math notranslate nohighlight">\(\sin\)</span> of <span class="math notranslate nohighlight">\(\pi/6\)</span> and <span class="math notranslate nohighlight">\(\pi/3\)</span> from a unit equilateral triangle as illustrated in the figure below.</p>
+<figure class="align-default" id="id6">
+<img alt="../_images/equilateral.png" src="../_images/equilateral.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Using an equilateral triangle to find cos and sine of some common angles.</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For example,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8e003ea7-b48c-4729-8e53-1216d4097f7e">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-8e003ea7-b48c-4729-8e53-1216d4097f7e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\cos\left(\frac{\pi}{3}\right)=\frac{\sqrt{1^2-(1/2)^2}}{1}=\frac{\sqrt{3}}{2}
+\end{equation}\]</div>
+</section>
+<section id="pythagoras-theorem">
+<h3><span class="section-number">2.2.2. </span>Pythagoras’ theorem<a class="headerlink" href="#pythagoras-theorem" title="Permalink to this heading">#</a></h3>
+<p>The following result is a fundamental property involving the three sides of a right triangle:</p>
+<blockquote>
+<div><p>The square on the hypothenuse is equal to the sum of the squares on the other two sides</p>
+</div></blockquote>
+<p>For instance, if a right-triangle has base 3 and height 4, then the hypothenuse <span class="math notranslate nohighlight">\(h\)</span> satisfies</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1c97f134-fdbd-4f3a-8122-d7539280a9e4">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-1c97f134-fdbd-4f3a-8122-d7539280a9e4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+3^2+4^2=h^2 \quad \implies \quad h=5.
+\end{equation}\]</div>
+<p>The theorem can be illustrated using a simple geometric argument based on the figure shown below. In the animation, the four grey right triangles are identical. In their intial positions, they form a square on the hypothenuse, which is marked in red. Rotating two of the triangles forms a square on each of the other two sides, which are marked in blue and yellow.</p>
+<p>Since the total area is the same, we obtain the result that the red square must equal the sum of the blue and yellow squares.</p>
+<figure class="align-default" id="id7">
+<img alt="../_images/pythagoras.gif" src="../_images/pythagoras.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">A graphical proof of Pythagoras’ theorem.</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Further discussion about Pythagoras’ theorem, and ways of demonstrating or proving it can be found in a variety of online sources such as <a class="reference external" href="https://en.wikipedia.org/wiki/Pythagorean_theorem">Wikipedia</a></p>
+<div class="exercise admonition" id="files/trig-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.2 </span></p>
+<section id="exercise-content">
+<p>A Pythagorean triple is a right triangle in which all three side lengths are integers. For instance, 5,12,13 is a Pythagorean triple since <span class="math notranslate nohighlight">\(5^2+12^2=13^2\)</span>.</p>
+<p>Show that with given two counting numbers <span class="math notranslate nohighlight">\(a,b\)</span> the triangle with base <span class="math notranslate nohighlight">\((a^2-b^2)\)</span> and height <span class="math notranslate nohighlight">\(2ab\)</span> forms a Pythagorean triple.</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>The result can be shown using algebra. Summing the squares of the two sides gives a result that is a perfect square:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+(a^2-b^2)^2+(2ab)^2=a^4-b^4+2a^2b^2= (a^2+b^2)^2
+\end{equation*}\]</div>
+<p>For example, taking <span class="math notranslate nohighlight">\(a=8\)</span> and <span class="math notranslate nohighlight">\(b=3\)</span> gives the following Pythagorean triple:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+55^2+48^2=73^2
+\end{equation*}\]</div>
+</div>
+<p>We can also apply Pythagoras’ theorem to a right triangle with unit length hypothenuse to obtain a trigonometric identity. In that case the base of the triangle is <span class="math notranslate nohighlight">\(\cos(\theta)\)</span> and the height of the triangle is <span class="math notranslate nohighlight">\(\sin(\theta)\)</span> and so the theorem gives:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-15ba92d9-2a0e-405c-8e48-57f1e9e874cb">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-15ba92d9-2a0e-405c-8e48-57f1e9e874cb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\sin^2(\theta)+\cos^2(\theta)=1
+\end{equation}\]</div>
+</section>
+</section>
+<section id="equation-of-a-line">
+<h2><span class="section-number">2.3. </span>Equation of a line<a class="headerlink" href="#equation-of-a-line" title="Permalink to this heading">#</a></h2>
+<p>The slope of a line is a measure of its steepness. It tells us how much we have to go up (rise) for every unit that we march along (run). It is expressed as a ratio</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d14e482d-ce6c-4b24-b733-19c24350c62c">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-d14e482d-ce6c-4b24-b733-19c24350c62c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+m=\frac{\Delta y}{\Delta x}
+\end{equation}\]</div>
+<p>in which <span class="math notranslate nohighlight">\(\Delta x\)</span> represents the “run” and <span class="math notranslate nohighlight">\(\Delta y\)</span> represents the “rise”, as illustrated in the figure below for the line segment between two points <span class="math notranslate nohighlight">\((x_1,y_1)\)</span> and <span class="math notranslate nohighlight">\((x_2,y_2)\)</span>.</p>
+<figure class="align-default" id="rise-over-run">
+<img alt="../_images/rise-over-run.png" src="../_images/rise-over-run.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">The slope of the line segment is given by <span class="math notranslate nohighlight">\(m=\frac{y_2-y_1}{x_2-x_1}\)</span></span><a class="headerlink" href="#rise-over-run" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A straight line has constant slope. Therefore the rise over run between any two points on the line is equal to the slope between two particular points.</p>
+<p>For example, if we want to find the equation of the line between the points (1,3) and (2,5), we can first find the slope, which is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+m=\frac{\Delta y}{\Delta x} = \frac{5-3}{2-1}=2
+\end{equation*}\]</div>
+<p>We then equate this to the slope between one of the given points and an arbitrary point on the line. For example, we may choose the given point (1,3) and denote a general point on the line by <span class="math notranslate nohighlight">\((x,y)\)</span> as shown</p>
+<img alt="../_images/sloper.png" class="align-center" src="../_images/sloper.png" />
+<p>The equation of the line is thus given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{y-3}{x-1}=\frac{5-3}{2-1} \quad \implies \quad y=2x+1.
+\end{equation*}\]</div>
+<div class="exercise admonition" id="files/trig-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2.3 </span></p>
+<section id="exercise-content">
+<p>Find the equation of the line that passes through the points (1,4) and (2,-2).<br>
+Give your answer in the form <span class="math notranslate nohighlight">\(y=mx+c\)</span>,</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{y-4}{x-1}=\frac{-2-4}{2-1} \quad \implies \quad y=-6x+10
+\end{equation*}\]</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="algebra.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Basic algebra</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pfrac.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Rational fractions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-angles">2.1. Measuring angles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-trigonometry">2.2. Basic trigonometry</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-results">2.2.1. Common results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pythagoras-theorem">2.2.2. Pythagoras’ theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-of-a-line">2.3. Equation of a line</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ella Metcalfe
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,852 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Plotting stuff &#8212; PreU Mathematics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'files/plots';</script>
+    <link rel="shortcut icon" href="../_static/one.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Circuit problem" href="lcr.html" />
+    <link rel="prev" title="3. Rational fractions" href="pfrac.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/one.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/one.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="algebra.html">1. Basic algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="trig.html">2. Basic geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pfrac.html">3. Rational fractions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Plotting stuff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lcr.html">5. Circuit problem</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Plotting stuff</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratics">4.1. Quadratics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reciprocals">4.2. Reciprocals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-fractions">4.3. Rational fractions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="plotting-stuff">
+<h1><span class="section-number">4. </span>Plotting stuff<a class="headerlink" href="#plotting-stuff" title="Permalink to this heading">#</a></h1>
+<p>It is sometimes said that a picture is worth a thousand words, and a quick look through any scientific journal could well convince you of this claim. Graphical representations perform a key role in science to help illustrate, explain and evaluate complex relationships.</p>
+<p>We can produce high quality graphical representations of the functions that we are interested in using computer tools such as Wolfram Alpha, Desmos, or GeoGebra.</p>
+<p><em>However</em>, whilst we can use the computer to do plots for us, being able to idenitify various plot features without a computer is still a useful skill because the reasoning steps form the background to understanding more advanced concepts such as limits.</p>
+<p>In this chapter we will look at the graphs of quadratics and rational fractions. After completing the chapter you should be able to plot these functions without using a computer, and identify any vertical, horizontal or oblique asymptotes.</p>
+<section id="quadratics">
+<h2><span class="section-number">4.1. </span>Quadratics<a class="headerlink" href="#quadratics" title="Permalink to this heading">#</a></h2>
+<p>The general form of a quadratic may be given in expanded form or as a completed square:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-98605daa-521d-40d0-b02a-6c1ad399a2f6">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-98605daa-521d-40d0-b02a-6c1ad399a2f6" title="Permalink to this equation">#</a></span>\[\begin{align}
+y&amp;=ax^2+bx+c \\
+&amp;= a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a}
+\end{align}\]</div>
+<p>The <span class="math notranslate nohighlight">\(y\)</span>-intercept is at <span class="math notranslate nohighlight">\(y=c\)</span>. The <span class="math notranslate nohighlight">\(x\)</span>-intercepts can be found by factorisation or use of the completed square form. The number of roots depends on the sign of the discriminant.</p>
+<p>The shape of the plotted quadratic is called a parabola. It curves continuously in a direction that depends on the sign of <span class="math notranslate nohighlight">\(a\)</span>, as illustrated in the schematic plots below:</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/a78fda1a3bf9ca8fd3a067e81fb41dba72cb79b4c52e955a4bd8eeab46eb6299.png" src="../_images/a78fda1a3bf9ca8fd3a067e81fb41dba72cb79b4c52e955a4bd8eeab46eb6299.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">The shape of the quadratic function <span class="math notranslate nohighlight">\(y=ax^2+bx+c\)</span>, which is called a parabola.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The parabola has a single turning point, which can be identified from the completed square form of the quadratic function. The squared factor <span class="math notranslate nohighlight">\(\displaystyle \left(x+\frac{b}{2a}\right)^2\)</span> is minimised at the point</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fed5c5c2-ffc0-4ed6-8c71-7d5d19d4ee01">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-fed5c5c2-ffc0-4ed6-8c71-7d5d19d4ee01" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\biggr(x_*\ ,\ y_*\biggr)=\biggr(-\frac{b}{2a},\frac{4ac-b^2}{4a}\biggr)
+\end{equation}\]</div>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(a&gt;0\)</span> this point is a minimum</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(a&lt;0\)</span> this point is a maximum</p></li>
+</ul>
+<p>The plot below illustrates an example case where the quadratic has two distinct real roots.</p>
+<figure class="align-default" id="id2">
+<img alt="../_images/12073090a1342f551e4cfbc70a6441f33d7cae518f068644345f68491fb1d3c8.png" src="../_images/12073090a1342f551e4cfbc70a6441f33d7cae518f068644345f68491fb1d3c8.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">A plot of the quadratic <span class="math notranslate nohighlight">\(y=ax^2+bx+c\)</span> with <span class="math notranslate nohighlight">\(a&gt;0\)</span>. The plot illustrates the case where there are two negative <span class="math notranslate nohighlight">\(x_0,\ x_1\)</span>. The minimum point is denoted by <span class="math notranslate nohighlight">\((x_* \ , \ y_*)\)</span></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>If the quadratic does not have two distinct real roots, the curve will lie entirely above or below the horizontal axis, according to the sign of <span class="math notranslate nohighlight">\(a\)</span>. If there is a single <span class="math notranslate nohighlight">\(x\)</span>-intercept, this will coincide with the turning point of the function and the function will just touch the horizontal axis.</p>
+<div class="exercise admonition" id="files/plots-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.1 </span></p>
+<section id="exercise-content">
+<p>Plot the following curves without the assistance of a computer or calculator, and without using differentiation. Describe the steps you took to deduce the shape in each case:<br></br>
+(a) <span class="math notranslate nohighlight">\(y=x^2+6x+8 \qquad\)</span>
+(b) <span class="math notranslate nohighlight">\(y=x^2+6x+9 \qquad\)</span>
+(c) <span class="math notranslate nohighlight">\(y=x^2+6x+10 \qquad\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (a)</p>
+<p>The discriminant of this quadratic is positive, so it has two real roots. The curve intercepts the <span class="math notranslate nohighlight">\(x\)</span> axis in two places. The roots can be found using the quadratic formula or by factorisation:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=(x+4)(x+2)=0 \quad \implies \quad x=-4,-2
+\end{equation*}\]</div>
+<p>Completing the square on the quadratic gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=(x+3)^2-1
+\end{equation*}\]</div>
+<p>Therefore we can see that the minimum lies at <span class="math notranslate nohighlight">\((-3,-1)\)</span>. This point lies midway between the two roots on the <span class="math notranslate nohighlight">\(x\)</span> axis, as expected owing to the symmetry of the quadratic curve. The curve intercepts the <span class="math notranslate nohighlight">\(y\)</span> axis at <span class="math notranslate nohighlight">\(y=8\)</span>.</p>
+<p>The plot of the curve therefore looks as shown below:</p>
+<div class="docutils">
+<img alt="../_images/8f6d1b035ebd1ec49fee1e66491ddcde86ad6dbb1ad4d77515383532e422c20f.png" src="../_images/8f6d1b035ebd1ec49fee1e66491ddcde86ad6dbb1ad4d77515383532e422c20f.png" />
+</div>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (b)</p>
+<p>The discriminant of this quadratic is zero, so it has one real root, which is repeated. The curve touches the <span class="math notranslate nohighlight">\(x\)</span> axis in one place but does not cross it.</p>
+<p>Completing the square on the quadratic gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=(x+3)^2
+\end{equation*}\]</div>
+<p>Therefore we can see that the single root is at the point <span class="math notranslate nohighlight">\((-3,0)\)</span>, which is the minimum. The curve intercepts the <span class="math notranslate nohighlight">\(y\)</span> axis at <span class="math notranslate nohighlight">\(y=9\)</span>.</p>
+<p>The plot of the curve therefore looks as shown below:</p>
+<div class="docutils">
+<img alt="../_images/8a59eb70ee31063c569cd08d595b1dabbde9391146813cb2daaf0a9109c02fd2.png" src="../_images/8a59eb70ee31063c569cd08d595b1dabbde9391146813cb2daaf0a9109c02fd2.png" />
+</div>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (c)</p>
+<p>The discriminant of this quadratic is negative, so it has no real roots. The curve does not intercept the <span class="math notranslate nohighlight">\(x\)</span> axis.</p>
+<p>Completing the square on the quadratic gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=(x+3)^2+1
+\end{equation*}\]</div>
+<p>Therefore we can see that the minimum is at the point <span class="math notranslate nohighlight">\((-3,1)\)</span>. The curve intercepts the <span class="math notranslate nohighlight">\(y\)</span> axis at <span class="math notranslate nohighlight">\(y=10\)</span>.</p>
+<p>The plot of the curve therefore looks as shown below:</p>
+<div class="docutils">
+<img alt="../_images/15e86679aa67c9792be493083a4ac19c54e3aa203e73dfa0e33fa40935f62fe2.png" src="../_images/15e86679aa67c9792be493083a4ac19c54e3aa203e73dfa0e33fa40935f62fe2.png" />
+</div>
+</div>
+</section>
+<section id="reciprocals">
+<h2><span class="section-number">4.2. </span>Reciprocals<a class="headerlink" href="#reciprocals" title="Permalink to this heading">#</a></h2>
+<p>The term reciprocal means “one over something”. The most elementary reciprocal function is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-73874d93-07d9-43c0-a42a-8652964c05ba">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-73874d93-07d9-43c0-a42a-8652964c05ba" title="Permalink to this equation">#</a></span>\[\begin{equation}
+y=\frac{1}{x}
+\end{equation}\]</div>
+<p>This fraction is undefined when <span class="math notranslate nohighlight">\(x=0\)</span>. However, we can try some values of <span class="math notranslate nohighlight">\(x\)</span> that are close to zero. We observe that as <span class="math notranslate nohighlight">\(x\)</span> gets close to zero the fraction “blows up”, either in the positive or negative direction according to the sign of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Demonstration</p>
+<p>For positive values of <span class="math notranslate nohighlight">\(x\)</span> we obtain:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6bc9a8b5-e934-4108-af86-3ef6a67e488b">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-6bc9a8b5-e934-4108-af86-3ef6a67e488b" title="Permalink to this equation">#</a></span>\[\begin{align}
+x=\frac{1}{100}     \implies y=100, \qquad 
+\dots, \qquad
+x=\frac{1}{10^{10}} \implies y=10^{10}, \qquad \dots
+\end{align}\]</div>
+<p>For negative values of <span class="math notranslate nohighlight">\(x\)</span> we obtain:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c47af45e-be5c-4b2e-b8ee-a4e7c81be049">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-c47af45e-be5c-4b2e-b8ee-a4e7c81be049" title="Permalink to this equation">#</a></span>\[\begin{align}
+x=\frac{-1}{100}     \implies y=-100, \qquad 
+\dots, \qquad
+x=\frac{-1}{10^{10}} \implies y=-10^{10}, \qquad \dots
+\end{align}\]</div>
+</div>
+<p>Conversely, by trying some very large values of <span class="math notranslate nohighlight">\(x\)</span> we observe that the fraction approaches zero, whilst remaining positive or negative according to the sign of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Demonstration</p>
+<p>For positive values of <span class="math notranslate nohighlight">\(x\)</span> we obtain:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f5a3a8e1-c80b-4d6f-9d1d-41ac663a22ff">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-f5a3a8e1-c80b-4d6f-9d1d-41ac663a22ff" title="Permalink to this equation">#</a></span>\[\begin{align}
+x=100     \implies y=\frac{1}{100}, \qquad 
+\dots, \qquad 
+x=10^{10} \implies y=\frac{1}{10^{10}}, \qquad \dots
+\end{align}\]</div>
+<p>For negative values of <span class="math notranslate nohighlight">\(x\)</span> we obtain:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a3761b85-60be-4233-a41d-bd7f3b7cd5fd">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-a3761b85-60be-4233-a41d-bd7f3b7cd5fd" title="Permalink to this equation">#</a></span>\[\begin{align}
+x=-100     \implies y=\frac{-1}{100}, \qquad 
+\dots, \qquad 
+x=-10^{10} \implies y=\frac{-1}{10^{10}}, \qquad \dots
+\end{align}\]</div>
+</div>
+<p>We may represent these results graphically, as shown below. The dashed lines on the plot are called <em>asymptotes</em>. The curve continually approaches an asymptote, but does not meet it. For this function:</p>
+<ul class="simple">
+<li><p>The line <span class="math notranslate nohighlight">\(y=0\)</span> is a horizontal asymptote</p></li>
+<li><p>The line <span class="math notranslate nohighlight">\(x=0\)</span> is a vertical asymptote</p></li>
+</ul>
+<figure class="align-default" id="fig-reciprocal-x">
+<img alt="../_images/9f8fe3b0057ebe55aa81313b9132f755c65547f5998c1e07c7cad1e2e79db737.png" src="../_images/9f8fe3b0057ebe55aa81313b9132f755c65547f5998c1e07c7cad1e2e79db737.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">A plot of the function <span class="math notranslate nohighlight">\(1/x\)</span>, showing horizontal and vertical asymptotes.</span><a class="headerlink" href="#fig-reciprocal-x" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We may obtain similar plots for other reciprocals.</p>
+<div class="exercise admonition" id="files/plots-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.2 </span></p>
+<section id="exercise-content">
+<p>Identify any asymptotes of each of the following functions, and plot their curves:<br></br>
+(a) <span class="math notranslate nohighlight">\(\displaystyle y=\frac{1}{x^2} \qquad\)</span> (b) <span class="math notranslate nohighlight">\(y=\displaystyle \frac{1}{x^2+1}\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (a)</p>
+<p>This function is strictly positive for all values of <span class="math notranslate nohighlight">\(x\)</span>. It has a horizontal asymptote <span class="math notranslate nohighlight">\(y=0\)</span> and a vertical asymptote <span class="math notranslate nohighlight">\(x=0\)</span>. A plot of the function is shown below:</p>
+<div class="docutils">
+<img alt="../_images/094c7731afe925359b67da62063ed37e969691de4ab713694ffe3f05888ad752.png" src="../_images/094c7731afe925359b67da62063ed37e969691de4ab713694ffe3f05888ad752.png" />
+</div>
+<p>Notice that in this example the function does not change sign either side of the vertical asymptote. This is because the root <span class="math notranslate nohighlight">\(x=0\)</span> has multiplicity 2. A polynomial only changes sign at a root with odd-numbered multiplicity.</p>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (b)</p>
+<p>This function is strictly positive for all values of <span class="math notranslate nohighlight">\(x\)</span>. It has a horizontal asymptote <span class="math notranslate nohighlight">\(y=0\)</span> but no vertical asymptote as the denominator has no roots.</p>
+<p>The denominator is minimised when <span class="math notranslate nohighlight">\(x=0\)</span>, and this corresponds to a maximum of <span class="math notranslate nohighlight">\(y\)</span>. A plot of the function is shown below:</p>
+<div class="docutils">
+<img alt="../_images/db5c72641eb17ed3f69df5b40a3533dc3d0f5706a16fed201e7faa825fcdc570.png" src="../_images/db5c72641eb17ed3f69df5b40a3533dc3d0f5706a16fed201e7faa825fcdc570.png" />
+</div>
+</div>
+<p>The number of vertical asymptotes is determined by the number of distinct roots of the denominator. For example, let us consider the following function:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9787d2e9-ec08-4616-8bcb-962cd53d0c3a">
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-9787d2e9-ec08-4616-8bcb-962cd53d0c3a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+y=\frac{1}{(x-2)(x-4)}
+\end{equation}\]</div>
+<p>This example has a horizontal asymptote <span class="math notranslate nohighlight">\(y=0\)</span> and vertical asymptotes at <span class="math notranslate nohighlight">\(x=2,4\)</span>. It is convenient to examine the sign of the function on each side of the asymptotes using a table:</p>
+<div class="docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x&lt;2\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(2&lt;x&lt;4\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x&gt;4\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\((x-2)\)</span></p></td>
+<td><p>-</p></td>
+<td><p>+</p></td>
+<td><p>+</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\((x-4)\)</span></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>+</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{1}{(x-2)(x-4)}\)</span></p></td>
+<td><p>+</p></td>
+<td><p>-</p></td>
+<td><p>+</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>By plotting the horizontal and vertical asymptotes and using the table to identify the correct sign of the function, we may deduce that <span class="math notranslate nohighlight">\(y\)</span> has the shape shown below:</p>
+<div class="docutils">
+<img alt="../_images/a05ac9459dbbdea480a270e718a1a1d9ec0d3fef80bafcc5fa55acb0ee6166c9.png" src="../_images/a05ac9459dbbdea480a270e718a1a1d9ec0d3fef80bafcc5fa55acb0ee6166c9.png" />
+</div>
+<p>Notice that the function changes sign at each asymptote. We can anticpate this behaviour from the fact that each root has multiplicity 1.</p>
+<p>It may not be obvious that the plot of the function should be symmetric in the line <span class="math notranslate nohighlight">\(x=-3\)</span>. We can understand this by looking at the completed square form of the quadratic:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4fa90696-7d8c-4907-af2c-ada080cb431c">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-4fa90696-7d8c-4907-af2c-ada080cb431c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+y = \frac{1}{(x-3)^2-1}
+\end{equation}\]</div>
+<p>The denominator is minimised at <span class="math notranslate nohighlight">\(x=-3\)</span> and this corresponds to a local maximum of <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<div class="exercise admonition" id="files/plots-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.3 </span></p>
+<section id="exercise-content">
+<p>Identify any asymptotes of each of the following functions, and plot their curves:<br></br>
+(a) <span class="math notranslate nohighlight">\(\displaystyle y =\frac{1}{x^2+6x+10}\qquad\)</span>
+(b) <span class="math notranslate nohighlight">\(\displaystyle y=\frac{1}{x^2+6x+9}\qquad\)</span>
+(c) <span class="math notranslate nohighlight">\(\displaystyle y=\frac{1}{x^2+6x+8}\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (a)</p>
+<p>Since the discriminant of the quadratic is positive, it does not have any real roots. The denominator is strictly positive and therefore the curve lies entirely above the <span class="math notranslate nohighlight">\(x\)</span> axis.</p>
+<p>Completing the square on the denominator gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=\frac{1}{(x+3)^2+1}
+\end{equation*}\]</div>
+<p>The denominator is minimised when <span class="math notranslate nohighlight">\(x=-3\)</span> and this corresponds to the maximum of the curve. There are no vertical asymptotes, but there is a horizontal asymptote <span class="math notranslate nohighlight">\(y=0\)</span>.</p>
+<div class="docutils">
+<img alt="../_images/1562d0e28e4cf1a06fd0548b45473ba7b24ebbbc34f5cad7b16e130cee929f70.png" src="../_images/1562d0e28e4cf1a06fd0548b45473ba7b24ebbbc34f5cad7b16e130cee929f70.png" />
+</div>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (b)</p>
+<p>Since the discriminant of the quadratic is zero, it has one real root, which is repeated. The value of the denominator is strictly positive, except at the root. Therefore the curve lies entirely above the <span class="math notranslate nohighlight">\(x\)</span> axis.</p>
+<p>Completing the square on the denominator gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=\frac{1}{(x+3)^2}
+\end{equation*}\]</div>
+<p>This illustrates that there is a vertical asymptote <span class="math notranslate nohighlight">\(x=-3\)</span>, which corresponds to a root with multiplicity 2. There is a horizontal asymptote <span class="math notranslate nohighlight">\(y=0\)</span>.</p>
+<div class="docutils">
+<img alt="../_images/3085eba4fd9f2904b6f1eae14510e699da62811c1a35c04a5bf0a15608d2b7db.png" src="../_images/3085eba4fd9f2904b6f1eae14510e699da62811c1a35c04a5bf0a15608d2b7db.png" />
+</div>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (c)</p>
+<p>Since the discriminant of the quadratic is positive, it has two real roots and therefore two vertical asymptotes, which are at <span class="math notranslate nohighlight">\(x=-4,-2\)</span>.</p>
+<p>We can examine the sign of the function in different intervals using a table:</p>
+<div class="docutils">
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x&lt;-4\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(-4&lt;x&lt;-2\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x&gt;-2\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\((x+2)\)</span></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+<td><p>+</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\((x+4)\)</span></p></td>
+<td><p>-</p></td>
+<td><p>+</p></td>
+<td><p>+</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\displaystyle \frac{1}{(x+2)(x+4)}\)</span></p></td>
+<td><p>+</p></td>
+<td><p>-</p></td>
+<td><p>+</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></br>
+Completing the square on the denominator gives the following result from which it can also be seen that <span class="math notranslate nohighlight">\(x=-3\)</span> is a local maximum:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=\frac{1}{(x+3)^2-1}
+\end{equation*}\]</div>
+<div class="docutils">
+<img alt="../_images/eb5fe349a829d16ec5d41bba66a9ab6be575b6bbb4c2bfb8e4ce008e60212a39.png" src="../_images/eb5fe349a829d16ec5d41bba66a9ab6be575b6bbb4c2bfb8e4ce008e60212a39.png" />
+</div>
+</div>
+</section>
+<section id="rational-fractions">
+<h2><span class="section-number">4.3. </span>Rational fractions<a class="headerlink" href="#rational-fractions" title="Permalink to this heading">#</a></h2>
+<p>We now consider the more general case of rational fractions, such as the following example. We can see that the function will have a vertical asymptote at <span class="math notranslate nohighlight">\(x=1/2\)</span>. However, the behaviour of the function for “large” <span class="math notranslate nohighlight">\(x\)</span> is less obvious:</p>
+<div class="math notranslate nohighlight" id="equation-frac01">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-frac01" title="Permalink to this equation">#</a></span>\[y = \frac{3x^2+2x}{1-2x}\]</div>
+<p>For these examples, we use partial fraction decomposition to make progress:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b8b4ff01-94f8-47bc-afbc-118b0fbe44c1">
+<span class="eqno">(4.11)<a class="headerlink" href="#equation-b8b4ff01-94f8-47bc-afbc-118b0fbe44c1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+y= -\frac{3x}{2}-\frac{7}{4}-\frac{7}{4.(2x-1)}
+\end{equation}\]</div>
+<p>The decomposition allows us to analyse what happens to the function as <span class="math notranslate nohighlight">\(x\)</span> becomes large, in either the positive or negative direction. In that case, the value of <span class="math notranslate nohighlight">\(1/(2x-1)\)</span> becomes small, and so the function approaches the <em>oblique asymptote</em></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=-\frac{3}{2}x-\frac{7}{4}
+\end{equation*}\]</div>
+<p>The sign of <span class="math notranslate nohighlight">\(1/(2x-1)\)</span> determines whether the function approaches the asymptote from above or below.</p>
+<figure class="align-default" id="asymptotes-03">
+<img alt="../_images/22b7ae19b7c0e57ddf83ed58ea881186f552ac1c36dde10b18d147b9aba35e0f.png" src="../_images/22b7ae19b7c0e57ddf83ed58ea881186f552ac1c36dde10b18d147b9aba35e0f.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Plotting the function <span class="math notranslate nohighlight">\((3x^2+2x)/(1-2x)\)</span>.</span><a class="headerlink" href="#asymptotes-03" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="exercise admonition" id="horiz-ass">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.4 </span></p>
+<section id="exercise-content">
+<p>Produce a plot of the following function and identify any asymptotes:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=\frac{x^2+3x+1}{(2x-3)(2x+3)}
+\end{equation*}\]</div>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>The function has vertical asymptotes at <span class="math notranslate nohighlight">\(x=\pm3/2\)</span>, which each correspond to roots of multiplicity 1.</p>
+<p>To find the other asymptotes, we use partial fraction decomposition:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=\frac{1}{4}+\frac{5}{24(2x+3)}+\frac{31}{24(2x-3)}
+\end{equation*}\]</div>
+<p>For large values of <span class="math notranslate nohighlight">\(x\)</span> the second and third terms in this decomposition shrink to zero and so the rational fraction approaches <span class="math notranslate nohighlight">\(y=1/4\)</span>. This is a horizontal asymptote.</p>
+<p>The plot is shown below</p>
+<div class="docutils">
+<figure class="align-default">
+<img alt="../_images/185d5d78d2de676ee53707a287dff769c7dde9c8db95df5c7df0ccbc2dc07526.png" src="../_images/185d5d78d2de676ee53707a287dff769c7dde9c8db95df5c7df0ccbc2dc07526.png" />
+</figure>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pfrac.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Rational fractions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lcr.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Circuit problem</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quadratics">4.1. Quadratics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reciprocals">4.2. Reciprocals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rational-fractions">4.3. Rational fractions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ella Metcalfe
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
