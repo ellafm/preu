@@ -1,0 +1,1055 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Growth models &#8212; PreU Mathematics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'files/growth';</script>
+    <link rel="shortcut icon" href="../_static/two.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Rates of change" href="rates.html" />
+    <link rel="prev" title="Introduction" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/two.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/two.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Growth models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rates.html">2. Rates of change</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exponentials.html">3. Exponential trends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logarithms.html">4. Logarithms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Growth models</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-growth">1.1. Measures of growth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#percentage-point-growth">1.2. Percentage point growth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-growth-models">1.3. Annual growth models</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="growth-models">
+<h1><span class="section-number">1. </span>Growth models<a class="headerlink" href="#growth-models" title="Permalink to this heading">#</a></h1>
+<div class="quote admonition">
+<p class="admonition-title">Music on vinyl [<a class="reference external" href="https://www.bpi.co.uk/news-analysis/uk-recorded-music-revenues-rise-for-an-eighth-successive-year-in-2022/">BPI</a>]</p>
+<p>The purchase of albums on vinyl grew for a 15th consecutive year in 2022, [to] £119.5 million, up 3.1% on the year.  The biggest-selling albums on the format were led by Taylor Swift’s <em>Midnights</em>, Harry Styles’ <em>Harry’s House</em> […] and <em>The Car</em> by Arctic Monkeys.</p>
+</div>
+<p>This chapter provides an introduction to concepts and depictions of growth. After working through the chapter you should</p>
+<ul class="simple">
+<li><p>Understand the difference between absolute and relative growth and be able to calculate these two statistics for given data</p></li>
+<li><p>Be able to distinguish between relative growth and percentage-point growth and decide when it is appropriate to use either measure</p></li>
+<li><p>Calculate the average annual growth in absolute and relative terms, and write down models fitting these measurements.</p></li>
+<li><p>Say whether you think an absolute or relative growth model is appropriate for a given dataset or scenario, with justification.</p></li>
+</ul>
+<section id="measures-of-growth">
+<h2><span class="section-number">1.1. </span>Measures of growth<a class="headerlink" href="#measures-of-growth" title="Permalink to this heading">#</a></h2>
+<p>There are two princpal ways that we measure growth:</p>
+<p><strong>Absolute growth</strong></p>
+<p>This refers to the measured change in a quantity, in number of units. For example, if a plant leaf has increased in length from 3.6cm to 5.2cm then the absolute measure of growth is 1.6cm. A negative value would mean that the measurement quantity has decreased.</p>
+<p>We can write down a formula for the absolute growth of a measurement <span class="math notranslate nohighlight">\(y\)</span> as follows, where <span class="math notranslate nohighlight">\(y_0\)</span> is the initial value and <span class="math notranslate nohighlight">\(y_1\)</span> is the final value. In the example case described above, these values are 3.6cm and 5.2cm, respectively:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f0568869-2fe3-4efe-8570-e8161022abd1">
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-f0568869-2fe3-4efe-8570-e8161022abd1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\Delta y = y_1 - y_0
+\end{equation}\]</div>
+<p><strong>Relative growth</strong></p>
+<p>This refers to a growth measurement that is given as a fraction or percentage, rather than a number of units. For example, an increase in length from 3.6cm to 5.2cm could be described in relative terms as a 44.4% increase.</p>
+<p>We can convert our absolute growth formula to a relative growth formula by expressing it as a proportion of the initial measurement. This is called a <em>growth factor</em> :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5a954322-93a3-4143-a6b7-7887b3e02b2a">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-5a954322-93a3-4143-a6b7-7887b3e02b2a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{\Delta y}{y} = \frac{y_1-y_0}{y_0}
+\end{equation}\]</div>
+<p>Notice that the growth factor does not depend of the unit of measurement, due to unit cancellation between the numerator and denominator.</p>
+<p>To obtain the result as a percentage value we simply multiply by 100. A growth factor of 1 is therefore equivalent to a 100% increase.</p>
+<p>Test your understanding of relative growth by answering the following questions before you move on.</p>
+<div class="exercise admonition" id="files/growth-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.1 </span></p>
+<section id="exercise-content">
+<p>If the growth factor is 2, which of the following statements are true about the measurement?<br>(there may be more than one answer):</p>
+<table class="no-border">
+  <tr>
+    <td class="no-border">(a) it has doubled</td>
+    <td class="no-border">(b) it has increased two-fold</td>
+    <td class="no-border">(c) it has increased by its original size</td>
+  </tr>
+  <tr>
+    <td class="no-border">(d) it has tripled</td>
+    <td class="no-border">(e) it has increased three-fold</td>
+    <td class="no-border">(f) it has increased twice its original size</td>
+  </tr>
+</table>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>(b,d,f) are the true statements. If the relative growth factor is two, this means that the measurement has <em>increased</em> by twice its original size. This can also be described as a two-fold increase. Adding twice the size to the original size gives a result that is three times the original size!</p>
+</div>
+<div class="exercise admonition" id="files/growth-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.2 </span></p>
+<section id="exercise-content">
+<p>In 2005 the total public student loan debt of English domiciled students and EU students studying in England was £13.033 billion. By 2022 this figure had risen to £181.612 billion. Calculate both the absolute and relative growth during this period.</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">solution</p>
+<p>Denoting the public student debt by <span class="math notranslate nohighlight">\(y\)</span> (in £billions), the absolute growth is</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\Delta y = 181.612 - 13.033 = 168.129
+\end{equation*}\]</div>
+<p>Converting this to a relative growth measure shows that this is a whopping 13-fold increase!</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\Delta y}{y} = \frac{181.612 - 13.033}{13.033} = 12.93
+\end{equation*}\]</div>
+<p>In percentage terms, the increase is about 1300%.</p>
+</div>
+<div class="exercise admonition" id="files/growth-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.3 </span></p>
+<section id="exercise-content">
+<p>In 2017 the <a class="reference external" href="https://ourworldindata.org/rhino-populations">estimated</a> world population of southern white rhinos was 18,064. By 2021 it had fallen by about 11.7%. Approximately what was the population in 2021?</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>Using the formula for relative growth:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{y_1-y_0}{y_0}=-0.117 \quad \implies y_1=y_0(1-0.117)
+\end{equation*}\]</div>
+<p>Taking <span class="math notranslate nohighlight">\(y_0=18,064\)</span> gives an esimate of around 15,950.</p>
+</div>
+</section>
+<section id="percentage-point-growth">
+<h2><span class="section-number">1.2. </span>Percentage point growth<a class="headerlink" href="#percentage-point-growth" title="Permalink to this heading">#</a></h2>
+<p>Percentage point growth refers to the absolute difference between two percentages or proportions. For example, if the percentage of students who passed an exam increased from 85% to 90%, this would represent a five percentage point increase in the pass rate.</p>
+<p>We report changes in this way when we are interested in the actual increase or decrease in a percentage, rather than the relative change or proportion compared to a base value.</p>
+<p>To illustrate the difference between relative growth and percentage point growth, consider the following data which show the number of full-time undergraduate students enrolled at UCL vs any UK HE provider. The figures are derived from <a class="reference external" href="https://www.hesa.ac.uk/data-and-analysis/students/where-study">HESA data</a>.</p>
+<table class="table" id="id1">
+<caption><span class="caption-number">Table 1.1 </span><span class="caption-text">Full-time UG students enrolled at University College London vs any UK Higher Education provider</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>2014/15</p></th>
+<th class="head"><p>2021/22</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>UCL</strong></p></td>
+<td><p>15,350</p></td>
+<td><p>23,020</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>All UK</strong></p></td>
+<td><p>1,438,765</p></td>
+<td><p>1,728,210</p></td>
+</tr>
+</tbody>
+</table>
+<p>We can see that between 2014/15 and 2021/22 the number of students enrolled at UCL increased by 7,670 and that this represents a 50% uplift. Here, we used a percentage to report a relative increase in the number of UCL students.</p>
+<p>However, in the same period of time, UCL’s share of the student population only increased from 1.067% to 1.332%, which is an increase of 0.265 percentage points. Here, we used a percentage to report an absolute increase in the proportion of students who are at UCL.</p>
+<p>It is sometimes useful to report changes in a percentage or proportion in relative terms. However, you should take care, because “percentages of percentages” can be difficult to interpret or state correctly!</p>
+<p>For example, the increase from 1.067% share to 1.332% share represents a 24.9% increase in UCL’s share of the undergraduate population. We can infer that some other universities must have larger proportional increases in student numbers over the time period of the data, since UCL’s student numbers went up by half whilst its share of the undergraduate population increased by only a quarter.</p>
+<div class="exercise admonition" id="files/growth-exercise-3">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.4 </span></p>
+<section id="exercise-content">
+<p>The following statistics on UK voter intentions were provided by a <a class="reference external" href="https://www-statista-com.libproxy.ucl.ac.uk/statistics/985764/voting-intention-in-the-uk/">YouGov survey</a></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>March 2020</p></th>
+<th class="head"><p>March 2023</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Conservative</p></td>
+<td><p>52%</p></td>
+<td><p>23%</p></td>
+</tr>
+<tr class="row-odd"><td><p>Labour</p></td>
+<td><p>28%</p></td>
+<td><p>45%</p></td>
+</tr>
+</tbody>
+</table>
+<p>Based on these statistics, calculate the increase in labour voting intentions over the period. State your answer both in percentage-point terms and in relative terms. Which of these measures do you think is most appropriate here?</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p><strong>percentage points:</strong><br>
+45-28=17<br>
+Labour’s share of voting intentions increased by 17 percentage points.</p>
+<p><strong>Relative change:</strong><br>
+17/28=0.607<br>
+Labour’s share of voting intentions increased by 60.7%</p>
+<p>To avoid potential confusion for readers, it would be more accurate and clearer to state the absolute increase of 17 percentage points rather than using the percentage change. This approach provides a more straightforward representation of the change in Labour voting intentions over the given period.</p>
+</div>
+</section>
+<section id="annual-growth-models">
+<h2><span class="section-number">1.3. </span>Annual growth models<a class="headerlink" href="#annual-growth-models" title="Permalink to this heading">#</a></h2>
+<p>We may be interested to compare growth amount over time. These comparisons can be done in absolute or relative terms as best fits the data and the purpose of the analysis.</p>
+<p>If the data indicates consistent absolute growth every year then it would be appropriate to use an absolute measure. If the data indicates a consistent growth factor or proportional change then a relative measure would be more suitable.</p>
+<p>The table below shows an example, based on annual data for full-time undergraduate students at UCL. In the second and third rows the growth between consecutive years is calculated using the data from the first row:</p>
+<table class="table" id="id2">
+<caption><span class="caption-number">Table 1.2 </span><span class="caption-text">Annual growth of full-time UG student numbers at UCL</span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>2014/15</p></th>
+<th class="head"><p>2015/16</p></th>
+<th class="head"><p>2016/17</p></th>
+<th class="head"><p>2017/18</p></th>
+<th class="head"><p>2018/19</p></th>
+<th class="head"><p>2019/20</p></th>
+<th class="head"><p>2020/21</p></th>
+<th class="head"><p>2021/22</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Number</p></td>
+<td><p>15,350</p></td>
+<td><p>16,755</p></td>
+<td><p>17,405</p></td>
+<td><p>18,285</p></td>
+<td><p>18,675</p></td>
+<td><p>19,145</p></td>
+<td><p>21,700</p></td>
+<td><p>23,020</p></td>
+</tr>
+<tr class="row-odd"><td><p>Growth</p></td>
+<td><p>1,405</p></td>
+<td><p>650</p></td>
+<td><p>880</p></td>
+<td><p>390</p></td>
+<td><p>470</p></td>
+<td><p>2,555</p></td>
+<td><p>1,320</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-even"><td><p>%</p></td>
+<td><p>9.153%</p></td>
+<td><p>3.879%</p></td>
+<td><p>5.056%</p></td>
+<td><p>2.132%</p></td>
+<td><p>2.517%</p></td>
+<td><p>13.346%</p></td>
+<td><p>6.083%</p></td>
+<td><p>-</p></td>
+</tr>
+</tbody>
+</table>
+<p>For this dataset the Average Annual Growth (AAG) is found to be:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(k=1,096\)</span> students in absolute terms</p></li>
+<li><p><span class="math notranslate nohighlight">\(r=6.02\%\)</span> in relative terms</p></li>
+</ul>
+<p>We can compare the observed pattern of actual student numbers to a model based on either of these statistics.</p>
+<p><br></br>
+<strong>Absolute growth model</strong></p>
+<p>In this model we will assume consistent absolute growth of <span class="math notranslate nohighlight">\(k\)</span> units per year. We use <span class="math notranslate nohighlight">\(y_n\)</span> to denote the measurement value in the <span class="math notranslate nohighlight">\(n\)</span>th year, with <span class="math notranslate nohighlight">\(y_0\)</span> representing the first measurement. We may then write down a general result, describing a linear relationship:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-01108c40-b8eb-46dd-b6f6-ae4f7263edc6">
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-01108c40-b8eb-46dd-b6f6-ae4f7263edc6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+y_n = y_0+nk
+\end{equation}\]</div>
+<p>In our example where <span class="math notranslate nohighlight">\(y\)</span> represents student numbers at UCL, the initial value is <span class="math notranslate nohighlight">\(y_0=15,350\)</span> and <span class="math notranslate nohighlight">\(k=1,096\)</span> based on the AAG. We can produce a table and plot to compare the data with the model. If we think the model is a good fit to the data then we can potentially use it to predict future student numbers.</p>
+<table class="table" id="id3">
+<caption><span class="caption-number">Table 1.3 </span><span class="caption-text">Estimates based on 1,096 additional students each year</span><a class="headerlink" href="#id3" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>2015/16</p></th>
+<th class="head"><p>2016/17</p></th>
+<th class="head"><p>2017/18</p></th>
+<th class="head"><p>2018/19</p></th>
+<th class="head"><p>2019/20</p></th>
+<th class="head"><p>2020/21</p></th>
+<th class="head"><p>2021/22</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>16,446</p></td>
+<td><p>17,542</p></td>
+<td><p>18,638</p></td>
+<td><p>19,734</p></td>
+<td><p>20,830</p></td>
+<td><p>21,926</p></td>
+<td><p>23,022</p></td>
+</tr>
+</tbody>
+</table>
+<p><br></br>
+<strong>Relative growth model</strong></p>
+<p>In this model we assume consistent percentage increase of <span class="math notranslate nohighlight">\(r\%\)</span> per year. We use <span class="math notranslate nohighlight">\(y_n\)</span> to denote the measurement value in the <span class="math notranslate nohighlight">\(n\)</span>th year, with <span class="math notranslate nohighlight">\(y_0\)</span> representing the first measurement. We may then write down a set of relationships between each measuement and the one before it:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c8352d87-d9b4-471e-a92f-92b9688693a9">
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-c8352d87-d9b4-471e-a92f-92b9688693a9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+y_1 = \biggr(1+\frac{r}{100}\biggr)y_0, \qquad y_2 = \biggr(1+\frac{r}{100}\biggr)y_1, \qquad \dots \qquad y_n = \biggr(1+\frac{r}{100}\biggr)y_{n-1}
+\end{equation}\]</div>
+<p>By combining these results, we obtain a general formula for the measurement value in the <span class="math notranslate nohighlight">\(n\)</span>th year:</p>
+<div class="math notranslate nohighlight" id="equation-themodel">
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-themodel" title="Permalink to this equation">#</a></span>\[y_n=\left(1+\frac{r}{100}\right)y_{n-1} \quad = \left(1+\frac{r}{100}\right)^2y_{n-2}\quad = \dots \quad = \left(1+\frac{r}{100}\right)^n y_0\]</div>
+<p>In our example where <span class="math notranslate nohighlight">\(y\)</span> represents student numbers at UCL, the initial value is <span class="math notranslate nohighlight">\(y_0=15,350\)</span> and <span class="math notranslate nohighlight">\(r=6.02\%\)</span> based on the AAG. We can produce a table and plot to compare the data with the model. If we think the model is a good fit to the data then we can potentially use it to predict future student numbers.</p>
+<table class="table" id="id4">
+<caption><span class="caption-number">Table 1.4 </span><span class="caption-text">Estimated student numbers compared to estimates based on 6.02% annual growth</span><a class="headerlink" href="#id4" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>2015/16</p></th>
+<th class="head"><p>2016/17</p></th>
+<th class="head"><p>2017/18</p></th>
+<th class="head"><p>2018/19</p></th>
+<th class="head"><p>2019/20</p></th>
+<th class="head"><p>2020/21</p></th>
+<th class="head"><p>2021/22</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>16,274</p></td>
+<td><p>17,253</p></td>
+<td><p>18,292</p></td>
+<td><p>19,393</p></td>
+<td><p>20,561</p></td>
+<td><p>21,799</p></td>
+<td><p>23,111</p></td>
+</tr>
+</tbody>
+</table>
+<p><br></br>
+<strong>Estimating validity</strong></p>
+<p>Plotting the model estimates together with the data can give us an indication of how good the model is. The figure below does this for our student numbers data. You can toggle between two different versions of the plot showing estimates based on either the absolute or relative growth model.</p>
+<div>
+  <img id="stun" src="../_static/stun.png" style="display:block">
+  <img id="stup" src="../_static/stup.png" style="display:none">
+</div>
+<figure class="no-margin align-default" id="id5">
+<img alt="../_images/kludge.png" src="../_images/kludge.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Actual student numbers compared to estimates based on <strong><span id="stu-text">1,096 additional students each year</span></strong> <br> To change the estimate <button onclick="toggleImages2()">click here</button></span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<script>
+  function toggleImages2() {
+    var image1 = document.getElementById("stun");
+    var image2 = document.getElementById("stup");
+    var stutext= document.getElementById("stu-text")
+
+    if (image1.style.display === "block") {
+      image1.style.display = "none";
+      image2.style.display = "block";
+      stutext.textContent = "6.02% annual growth";
+    } else {
+      image1.style.display = "block";
+      image2.style.display = "none";
+      stutext.textContent = "1,096 additional students each year";
+    }
+  }
+</script>
+<p>From the plots there does not appear to be much to suggest that either model is significantly better in this case. This is not altogether surprising, since the function <span class="math notranslate nohighlight">\((1+r/100)^n\)</span> is close to linear over the short term if <span class="math notranslate nohighlight">\(r\)</span> is small. The decision on which model to use may therefore need to be based on theoretical reasoning, for instance about how UCL student recruitment works.</p>
+<div class="exercise admonition" id="files/growth-exercise-4">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.5 </span></p>
+<section id="exercise-content">
+<p>If we do not have data available for all years, we can estimate an annual growth factor using only the first measurement <span class="math notranslate nohighlight">\(y_0\)</span> and last measurement <span class="math notranslate nohighlight">\(y_n\)</span> by rearranging <a class="reference internal" href="#equation-themodel">(1.5)</a>. Use this approach to estimate <span class="math notranslate nohighlight">\(r\)</span> for the student number data. How does this compare to what we found using the AAG? Which measure do you think is better?</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>From <a class="reference internal" href="#equation-themodel">(1.5)</a> we obtain</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y_n = \biggr(1+\frac{r}{100}\biggr)^ny_0 \qquad \implies \qquad 1+\frac{r}{100}=\biggr(\frac{y_n}{y_0}\biggr)^{1/n}
+\end{equation*}\]</div>
+<p>This estimate is called the Compound Annual Growth (CAG) formula. For our student number data, we obtain</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+1+\frac{r}{100}=\biggr(\frac{23,020}{15,350}\biggr)^{1/7} \quad \implies r=5.96%
+\end{equation*}\]</div>
+<p>The result is pretty close to the AAG that we calculated, suggesting that our model of a constant growth factor should be a fairly good fit over the period of the data.</p>
+<p>However, we should be very cautious when using the CAG formula to estimate an annual growth rate, since it relies on the model assumption that the growth factor is constant. If we have annual data available then we should find the annual growth rates so that we test this claim.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is very important that we exercise caution when projecting a growth model into the future as there is significant possibility that future outcomes may deviate or differ from what the model predicts.</p>
+<p>The fact that data fits a model is no guarantee that the model assumptions are correct or that the model includes any key factors that could influence the future growth, such as resource limitations.</p>
+</div>
+<h4> Case study: student loan</h4>
+<p>This case study on student loans is provided for you to practice evaluating whether data fit a linear or exponential growth model.</p>
+<p>The table below shows how the amount of student debt in England has changed since 2005. Data are obtained from <a class="reference external" href="https://researchbriefings.files.parliament.uk/documents/SN01079/SN01079.pdf">House of Commons Student Loan Statistics</a> [page 35, table 2].</p>
+<table class="no-border table" id="debt-table">
+<caption><span class="caption-number">Table 1.5 </span><span class="caption-text">Public student loan debt of English domiciled students and EU students studying in England.</span><a class="headerlink" href="#debt-table" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(t\)</span> (year)</p></th>
+<th class="head"><p>2005</p></th>
+<th class="head"><p>2006</p></th>
+<th class="head"><p>2007</p></th>
+<th class="head"><p>2008</p></th>
+<th class="head"><p>2009</p></th>
+<th class="head"><p>2010</p></th>
+<th class="head"><p>2011</p></th>
+<th class="head"><p>2012</p></th>
+<th class="head"><p>2013</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(y\)</span> <strong>(£ million)</strong></p></td>
+<td><p>13033</p></td>
+<td><p>15322</p></td>
+<td><p>18116</p></td>
+<td><p>21944</p></td>
+<td><p>25963</p></td>
+<td><p>30489</p></td>
+<td><p>35186</p></td>
+<td><p>40272</p></td>
+<td><p>45903 </p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(t\)</span> <strong>year</strong></p></td>
+<td><p><strong>2014</strong></p></td>
+<td><p><strong>2015</strong></p></td>
+<td><p><strong>2016</strong></p></td>
+<td><p><strong>2017</strong></p></td>
+<td><p><strong>2018</strong></p></td>
+<td><p><strong>2019</strong></p></td>
+<td><p><strong>2020</strong></p></td>
+<td><p><strong>2021</strong></p></td>
+<td><p><strong>2022</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(y\)</span> <strong>(£ million)</strong></p></td>
+<td><p>54355</p></td>
+<td><p>64735</p></td>
+<td><p>76253</p></td>
+<td><p>89344</p></td>
+<td><p>104457</p></td>
+<td><p>121813</p></td>
+<td><p>140093</p></td>
+<td><p>160594</p></td>
+<td><p>181612</p></td>
+</tr>
+</tbody>
+</table>
+<div class="exercise admonition" id="files/growth-exercise-5">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.6 </span></p>
+<section id="exercise-content">
+<p>Public student debt in England has increased by around 1300% over a 17 year period. Which of the following do you think is closest to the annual (per year) growth rate over this period?</p>
+<table class="no-border">
+  <tr>
+    <td class="no-border">(a) 76%</td>
+    <td class="no-border">(b) 17%</td>
+    <td class="no-border">(c) 2%</td>
+    <td class="no-border">(d) 1%</td>
+  </tr>
+</table>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>The answer is (b) 17%.</p>
+<p>If you went for answer (a) this is probably because you divided the total percentage increase by the number of years. However, this is not how compound growth works.</p>
+<p>Let us suppose that the student debt grows by 76% in the first year. In that case, the total balance at the beginning of the first year would be given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+D_1 = £13.033\textrm{B} + 0.76 \times £13.033\textrm{B} = £13.033\textrm{B} \times 1.76 = £22.938\textrm{B}
+\end{equation*}\]</div>
+<p>The amount owed at the end of the second year would be given by 76% growth on the first year value</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+D_2 = (£13.033\textrm{B} \times 1.76) \times 1.76 =  £13.033\textrm{B} \times 1.76^2 = £40.371\textrm{B}
+\end{equation*}\]</div>
+<p>Continuing in this manner we find that the amount owed at the end of the <span class="math notranslate nohighlight">\(n\)</span>th year would be given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+D_n = £13.033\textrm{B} \times 1.76^n
+\end{equation*}\]</div>
+<p>Taking <span class="math notranslate nohighlight">\(n=17\)</span> gives a result of £ 194,428,420 B. This is about 500 times greater than the combined global wealth!</p>
+<p>On the other hand, with a 17% growth rate we obtain</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+D_n £13.033\textrm{B} \times 1.17^{17} = £188\textrm{B}
+\end{equation*}\]</div>
+<p>This figure is only about 0.05% of combined global wealth. It is also pretty close to the figure of £181.162B that is given in the table.</p>
+<p>These calculations assume that growth is proportional, which is a pretty significant assumption.</p>
+</div>
+<div class="exercise admonition" id="files/growth-exercise-6">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.7 </span></p>
+<section id="exercise-content">
+<p>Use the figures given in the table to find the annual growth rates</p>
+<ul class="simple">
+<li><p>in absolute terms (£)</p></li>
+<li><p>in relative terms (%)</p></li>
+</ul>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>aaa</p>
+</div>
+<table class="no-border table" id="id6">
+<caption><span class="caption-number">Table 1.6 </span><span class="caption-text">Public student loan debt of English domiciled students and EU students studying in England.</span><a class="headerlink" href="#id6" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(t\)</span> (year)</p></th>
+<th class="head"><p>2005</p></th>
+<th class="head"><p>2006</p></th>
+<th class="head"><p>2007</p></th>
+<th class="head"><p>2008</p></th>
+<th class="head"><p>2009</p></th>
+<th class="head"><p>2010</p></th>
+<th class="head"><p>2011</p></th>
+<th class="head"><p>2012</p></th>
+<th class="head"><p>2013</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(y\)</span> <strong>(£ million)</strong></p></td>
+<td><p>13033</p></td>
+<td><p>15322</p></td>
+<td><p>18116</p></td>
+<td><p>21944</p></td>
+<td><p>25963</p></td>
+<td><p>30489</p></td>
+<td><p>35186</p></td>
+<td><p>40272</p></td>
+<td><p>45903 <tr style="display: none;" id="hide-row1"><td><span class="math notranslate nohighlight">\(\frac{1}{y}\frac{\Delta y}{\Delta t}\)</span></td><td>17.56</td><td>18.24</td><td>21.13</td><td>18.31</td><td>17.43</td><td>15.41</td><td>14.45</td><td>13.98</td><td>18.41</td></tr></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(t\)</span> <strong>year</strong></p></td>
+<td><p><strong>2014</strong></p></td>
+<td><p><strong>2015</strong></p></td>
+<td><p><strong>2016</strong></p></td>
+<td><p><strong>2017</strong></p></td>
+<td><p><strong>2018</strong></p></td>
+<td><p><strong>2019</strong></p></td>
+<td><p><strong>2020</strong></p></td>
+<td><p><strong>2021</strong></p></td>
+<td><p><strong>2022</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(y\)</span> <strong>(£ million)</strong></p></td>
+<td><p>54355</p></td>
+<td><p>64735</p></td>
+<td><p>76253</p></td>
+<td><p>89344</p></td>
+<td><p>104457</p></td>
+<td><p>121813</p></td>
+<td><p>140093</p></td>
+<td><p>160594</p></td>
+<td><p>181612 <tr style="display: none;" id="hide-row2"><td><span class="math notranslate nohighlight">\(\frac{1}{y}\frac{\Delta y}{\Delta t}\)</span></td><td>19.10</td><td>17.79</td><td>17.17</td><td>16.92</td><td>16.61</td><td>15.01</td><td>14.63</td><td>13.09</td><td> - </td></tr></p></td>
+</tr>
+</tbody>
+</table>
+<p>For this dataset the absolute growth rates are certainly not constant! However, the relative growth rates turn out to be quite similar. Try calculating the relative growth rates yourself and when you are ready to reveal the answers <button onclick="toggleRows()">click here</button></p>
+<script>
+  function toggleRows() {
+    var row1 = document.getElementById("hide-row1");
+    var row2 = document.getElementById("hide-row2");
+    if (row1.style.display === "none") {
+      row1.style.display = "table-row";
+      row2.style.display = "table-row";
+    } else {
+      row1.style.display = "none";
+      row2.style.display = "none";
+    }
+  }
+</script>
+<div class="exercise admonition" id="files/growth-exercise-7">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.8 </span></p>
+<section id="exercise-content">
+<p>Based on the absolute and relative growth values that you found above, decide whether student loan debt can be best described by a linear or exponential model.</p>
+<p>Use a graphing programme such as Desmos to produce a plot of student loan debt against time, based on your model.</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>The above results suggest growth by a consistent percentage amount every year. Taking the average of the values gives a growth rate of around 16.78%.</p>
+<p>A plot of the data compared to the constant relative growth model is shown below. The model function is given by the following equation, where the debt <span class="math notranslate nohighlight">\(D\)</span> is measured in £billions. Notice that in this example the exponent is <span class="math notranslate nohighlight">\((t-t_0)\)</span> to account for the fact that the measurements started in 2005.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+D=D_0 (1.168)^{t-t_0}, \qquad t_0=2005, \quad D_0=13.033 
+\end{equation*}\]</div>
+<figure class="align-default" id="id7">
+<img alt="../_images/75fc9dcb4b656db5f742f5bdf971e28c91d421a766d94e963c22a6b304d858c8.png" src="../_images/75fc9dcb4b656db5f742f5bdf971e28c91d421a766d94e963c22a6b304d858c8.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Public student loan debt data, compared to an annual growth rate of 16.8%.<br></span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="exercise admonition" id="files/growth-exercise-8">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1.9 </span></p>
+<section id="exercise-content">
+<p>If the historic growth trend continues, in what year will student loan debt reach twice the figure that it is today?</p>
+</section>
+</div>
+<div class="dropdown solution admonition">
+<p class="admonition-title">Solution</p>
+<p>If the growth rate remains roughly constant (as it has done over the last 17 years) we can expect that the student loan debt will reach twich its current value in five years, since <span class="math notranslate nohighlight">\(1.168^5\)</span> gives a result that is a bit bigger than 2.</p>
+<p>Note: If you inspect the table values you will also see that students loan debt has doubled roughly every five years.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="rates.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Rates of change</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-growth">1.1. Measures of growth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#percentage-point-growth">1.2. Percentage point growth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-growth-models">1.3. Annual growth models</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ella Metcalfe
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

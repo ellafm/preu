@@ -1,0 +1,739 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3. Derivative applications &#8212; PreU Mathematics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'files/derivative_applications';</script>
+    <link rel="shortcut icon" href="../_static/logo-light.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Integration" href="integration.html" />
+    <link rel="prev" title="2. Differentiation" href="differentiation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/three.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/three.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="limits.html">1. Know your limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differentiation.html">2. Differentiation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Derivative applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">4. Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration_techniques.html">5. Integration techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sofa.html">6. The sofa challenge</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Derivative applications</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-and-normal">3.1. Tangent and normal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-points">3.2. Stationary points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gompertz">3.3. Gompertz</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="derivative-applications">
+<h1><span class="section-number">3. </span>Derivative applications<a class="headerlink" href="#derivative-applications" title="Permalink to this heading">#</a></h1>
+<p>This chapter is about applying differentiation to find tangents and stationary points. The latter problem is especially important, as minimisation problems are of great interest to scientists.</p>
+<p>After completing the chapter you should be able to:</p>
+<ul class="simple">
+<li><p>find the equation of the tangent at a given point on a curve</p></li>
+<li><p>find and classify stationary points of functions</p></li>
+</ul>
+<section id="tangent-and-normal">
+<h2><span class="section-number">3.1. </span>Tangent and normal<a class="headerlink" href="#tangent-and-normal" title="Permalink to this heading">#</a></h2>
+<p>Recall that the equation of the line passing through a given point <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> with slope <span class="math notranslate nohighlight">\(m\)</span> is given by:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{y-y_0}{x-x_0}=m \qquad \text{i.e} \qquad y=m(x-x_0)+y_0.
+\end{equation*}\]</div>
+<p>This result is essentially a mathematical statement of the fact that the slope of a line is constant.</p>
+<h2>Tangent</h2>
+<p>The tangent line at a given point <span class="math notranslate nohighlight">\((x_0,y_0)\)</span> on a curve is defined as the line with the same slope as the curve. The equation is therefore given by the following result, in which the notation <span class="math notranslate nohighlight">\([]_{x=x_0}\)</span> means that the enclosed expression is evaluated at <span class="math notranslate nohighlight">\(x=x_0\)</span>.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-802ce7f4-b72f-442a-b2c5-1bf22245e118">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-802ce7f4-b72f-442a-b2c5-1bf22245e118" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{y-y_0}{x-x_0}=m, \qquad m=\left[\frac{\mathrm{d}y}{\mathrm{d}x}\right]_{x=x_0}
+\end{equation}\]</div>
+<p>Below we use this definition to plot the tangent to the curve <span class="math notranslate nohighlight">\(y=x^2\)</span>.</p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Show calculation</p>
+<p>The analytic derivative of <span class="math notranslate nohighlight">\(y=x^2\)</span> is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}y}{\mathrm{d}x}=2x
+\end{equation*}\]</div>
+<p>Therefore the tangent equations are given by:</p>
+<ul class="simple">
+<li><p>At the point <span class="math notranslate nohighlight">\((0.2,0.04)\)</span></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{y-0.04}{x-0.2}=0.4 \quad \implies \quad y=0.4x-0.04
+\end{equation*}\]</div>
+<ul class="simple">
+<li><p>At the point <span class="math notranslate nohighlight">\((1.2,1.44)\)</span></p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{y-1.44}{x-1.2}=2.8 \quad \implies \quad y=2.8x-1.92
+\end{equation*}\]</div>
+</div>
+<figure class="align-default" id="id1">
+<img alt="../_images/93ce48ed530f0d245b6e56b7db0d47f3e0d6006accb5551f9dc8d6b83f0d5f76.png" src="../_images/93ce48ed530f0d245b6e56b7db0d47f3e0d6006accb5551f9dc8d6b83f0d5f76.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text"><span class="math notranslate nohighlight">\(y=x^2\)</span> and its tangent at <span class="math notranslate nohighlight">\(x=0.2,\ 1.2\)</span></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<h2>Normal</h2>
+<p>The gradient of the normal (perpendicular) line to the tangent is <span class="math notranslate nohighlight">\(-1/m\)</span>. The equation of the normal line is therefore given by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-711977ec-0b4a-4319-9d08-a070cc251f56">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-711977ec-0b4a-4319-9d08-a070cc251f56" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\quad \frac{y-y_0}{x-x_0}=-\frac{1}{m} \qquad m=\left[\frac{\mathrm{d}y}{\mathrm{d}x}\right]_{x=x_0}
+\end{equation}\]</div>
+<div class="dropdown solution admonition">
+<p class="admonition-title">Justification of the result</p>
+<p>The relationship between the slopes of the tangent and normal can be observed from the similarity of the two illustrated triangles below:</p>
+<div style="display: flex; justify-content: center;">
+  <img src="../_static/normal.png" style="display:block">
+</div>
+<p>Let <span class="math notranslate nohighlight">\(\theta\)</span> be the illustrated angle and define <span class="math notranslate nohighlight">\(m=\tan(\theta)\)</span>, representing the gradient of the blue line.</p>
+<p>The equation of the perpendicular line is therefore given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+m= \frac{x-x_0}{-(y-y_0)} \implies \frac{y-y_0}{x-x_0}=-\frac{1}{m}
+\end{equation*}\]</div>
+</div>
+<div class="exercise admonition" id="files/derivative_applications-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.1 </span></p>
+<section id="exercise-content">
+<p>Differentiate <span class="math notranslate nohighlight">\(y=x^4-2x^2\)</span> and hence</p>
+<p>(i) Calculate the equation of the tangent to this curve at <span class="math notranslate nohighlight">\(x=3\)</span><br>
+(ii) Calculate the equation of the normal to the curve at <span class="math notranslate nohighlight">\(x=3\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>We are interested in the point <span class="math notranslate nohighlight">\((3,63)\)</span> and at this point</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle 
+\left[\frac{\mathrm{d}y}{\mathrm{d}x}\right]_{x=3}=\biggr[4x^3-4x\biggr]_{x=3}=4(3^3)-4(3)=96\)</span></p>
+<p>(i) The tangent to the curve at the point satisfies</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle
+\frac{y-63}{x-3}=96 \quad \implies \quad  y=96x-225
+\)</span></p>
+<p>(ii) The normal to the curve at the point satisfies</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle
+\frac{y-63}{x-3}=\frac{-1}{96} \quad \implies \quad y=\frac{-1}{96}x+\frac{2017}{32}
+\)</span></p>
+</div>
+<p>It is also possible to get these results from Wolfram Alpha. For example, you can type:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.wolframalpha.com/input?i=line+tangent+to+y%3Dx%5E2+at+x%3D0.2">“line tangent to y=x^2 at x=0.2”</a></p></li>
+<li><p><a class="reference external" href="https://www.wolframalpha.com/input?i=line+normal+to+y%3Dx%5E4-2x%5E2+at+x%3D3">“line normal to y=x^4-2x^2 at x=3”</a></p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Sometimes it might take a little bit of experimenting to see if you can get the results that you want from Wolfram Alpha. For example, the following may give something unexpected!</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.wolframalpha.com/input?i=tangent+of+y%3Dx%5E4-2x%5E2+at+x%3D3">“tangent of y=x^4-2x^2 at x=3”</a></p></li>
+</ul>
+</div>
+</section>
+<section id="stationary-points">
+<h2><span class="section-number">3.2. </span>Stationary points<a class="headerlink" href="#stationary-points" title="Permalink to this heading">#</a></h2>
+<p>In some applications we need to find points where the rate of change of a function <span class="math notranslate nohighlight">\(y(x)\)</span> is zero. At these so-called “stationary points” the curve representing the function is flat. By way of example, we will consider the function plotted below.</p>
+<figure class="align-default" id="minimaxfig">
+<img alt="../_images/fcb30652ac01e445ed6bbc626a4d8bf583950142b4671e03e518862e3e02a32b.png" src="../_images/fcb30652ac01e445ed6bbc626a4d8bf583950142b4671e03e518862e3e02a32b.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text"><span class="math notranslate nohighlight">\(y(x)=-x^3+9x^2-24x+20\)</span> on the domain <span class="math notranslate nohighlight">\([0,5]\)</span></span><a class="headerlink" href="#minimaxfig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>It is clear from the plot that there is a local minimum and a local maximum. We can verify the location of these points by differentiation:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y^{\prime}(x)&amp;=-3 x^2+18x-24 \\
+             &amp;= -3(x-2)(x-4), \qquad y^{\prime}(x)=0 \implies x=2,4.
+\end{align*}\]</div>
+<p>It is also possible to solve some problems of this sort with Wolfram Alpha. For example:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.wolframalpha.com/input?i=stationary+points+of+-x%5E3%2B9x%5E2-24x%2B20">“stationary points of -x^3+9x^2-24x+20”</a></p></li>
+<li><p><a class="reference external" href="https://www.wolframalpha.com/input?i=roots+of+-3x%5E2%2B18x-24">“roots of -3x^2+18x-24”</a></p></li>
+</ul>
+<h2> Classification by hand</h2>
+<p>We can classify stationary points without the use of a plot by looking algebraically at the slope of the curve either side of each stationary point. This can be useful if we want to find general results that do not rely on producing a plot for each scenario.</p>
+<p>It is convenient to record the results in a table, as demonstrated below for the function plotted in <a class="reference internal" href="#minimaxfig"><span class="std std-numref">Fig. 3.2</span></a>. We know that the gradient changes sign only at the points <span class="math notranslate nohighlight">\(x=2,4\)</span>, so we can conveniently choose the test points as follows.</p>
+<table class="table" id="id2">
+<caption><span class="caption-number">Table 3.1 </span><span class="caption-text">Sign change for <span class="math notranslate nohighlight">\(y=-x^3+9x^2-24x+20\)</span></span><a class="headerlink" href="#id2" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x=1\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x=2\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x=3\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x=4\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x=5\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(y^{\prime}(x)\)</span></p></td>
+<td><p>-</p></td>
+<td><p>0</p></td>
+<td><p>+</p></td>
+<td><p>0</p></td>
+<td><p>-</p></td>
+</tr>
+</tbody>
+</table>
+<p>From the table, we can infer that <span class="math notranslate nohighlight">\(x=2\)</span> is a local minimum and <span class="math notranslate nohighlight">\(x=4\)</span> is a local maximum.</p>
+<div class="exercise admonition" id="files/derivative_applications-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.2 </span></p>
+<section id="exercise-content">
+<p>Can you guess the sign of the second derivative at the points <span class="math notranslate nohighlight">\(x=2,4\)</span> ?</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>The second derivative measures the rate of change of the slope <span class="math notranslate nohighlight">\(s\)</span>, since</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{\mathrm{d}^2y}{\mathrm{d}x^2} =\frac{\mathrm{d}}{\mathrm{d}x}\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{\mathrm{d}s}{\mathrm{d}x},
+\end{equation*}\]</div>
+<ul class="simple">
+<li><p>When <span class="math notranslate nohighlight">\(y^{\prime\prime}(x)&gt;0\)</span> the slope is increasing</p></li>
+<li><p>When <span class="math notranslate nohighlight">\(y^{\prime\prime}(x)&lt;0\)</span> the slope is decreasing</p></li>
+</ul>
+<p>Since the slope at <span class="math notranslate nohighlight">\(x=2\)</span> is going from negative to positive, the second derivative at this point will be positive (increasing).</p>
+<p>Since the slope at <span class="math notranslate nohighlight">\(x=4\)</span> is going from positive to negative, the second derivative at this point will be negative (decreasing).</p>
+<p>We can therefore use the second derivative to classify local maxima/minima. However, this test is not conclusive for the case when the second derivative is equal to zero.</p>
+</div>
+<p>In addition to maxima and minima we have the possibility of another type of stationary point called a <em>point of inflection</em>. This occurs when the slope of a function becomes zero without changing sign. The most basic example of an inflection point is for the function <span class="math notranslate nohighlight">\(y=x^3\)</span>, which is stationary at <span class="math notranslate nohighlight">\(x=0\)</span>. Plots of the function and its derivative are illustrated below:</p>
+<figure class="align-default" id="id3">
+<img alt="../_images/a10ad61d65e46dfedd9e63206faf5132a7fa723dd0ab0b427dbbc8842bff6401.png" src="../_images/a10ad61d65e46dfedd9e63206faf5132a7fa723dd0ab0b427dbbc8842bff6401.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">[Left] The cubic has an inflection point at <span class="math notranslate nohighlight">\(x=0.\)</span></span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The table below shows how the sign either side of the stationary point.</p>
+<table class="table" id="id4">
+<caption><span class="caption-number">Table 3.2 </span><span class="caption-text">Sign change for <span class="math notranslate nohighlight">\(y=x^3\)</span></span><a class="headerlink" href="#id4" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x=-1\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x=0\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(x=1\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(y^{\prime}(x)\)</span></p></td>
+<td><p>+</p></td>
+<td><p>0</p></td>
+<td><p>+</p></td>
+</tr>
+</tbody>
+</table>
+<div class="exercise admonition" id="files/derivative_applications-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3.3 </span></p>
+<section id="exercise-content">
+<p>Show that the following function has a stationary point at <span class="math notranslate nohighlight">\(x=2.\)</span> What does the result <span class="math notranslate nohighlight">\(y^{\prime\prime}(2)\)</span> tell you about this point? Is this point a local maximum/minimum/inflection?</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y(x)=x^4-8x^3+24x^2-32x+23
+\end{equation*}\]</div>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p><span class="math notranslate nohighlight">\(y^{\prime}(x)=4x^3-24x^2+48x-32\)</span><br>
+<span class="math notranslate nohighlight">\(\implies y^{\prime}(2)=32-96+96-32=0\)</span></p>
+<p><span class="math notranslate nohighlight">\(y^{\prime\prime}(x)=12x^2-48x+48\)</span><br>
+<span class="math notranslate nohighlight">\(\implies y^{\prime\prime}(2)=48-96+48=0\)</span></p>
+<p>This result doesn’t tell us anything about the stationary point! It could be a local maximum/minimum or a point of inflection.</p>
+<p>In this case the slope is increasing either side of the stationary point, so the point is a minimum:</p>
+<p><span class="math notranslate nohighlight">\(y^{\prime\prime}(x)=12(x^2-4x+4)=12(x-2)^2 \geq 0 \ \forall x\)</span></p>
+</div>
+<p><a class="reference external" href="https://www.wolframalpha.com/input?i=stationary+points+of+y%3Dx%5E4-8x%5E3%2B24x%5E2-32x%2B23">Wolfram Alpha also has the answer</a></p>
+</section>
+<section id="gompertz">
+<h2><span class="section-number">3.3. </span>Gompertz<a class="headerlink" href="#gompertz" title="Permalink to this heading">#</a></h2>
+<p>The Gompertz function can be used in <a class="reference external" href="https://en.wikipedia.org/wiki/Gompertz_function#:~:text=an%20arbitrary%20constant.-,Example%20uses,-%5Bedit%5D">various modelling scenarios</a>, such to model population growth, spread of disease and growth of tumours. It is given by</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y = a e^{-be^{-ct}}, \qquad a,b,c&gt;0.
+\end{equation*}\]</div>
+<p>A plot of the curve is shown below for particular values of <span class="math notranslate nohighlight">\(a,b,c\)</span>.</p>
+<figure class="align-default">
+<img alt="../_images/51e0fed5a88f545c8731a163a43258d5620820127357d250de60b16b074d0a5c.png" src="../_images/51e0fed5a88f545c8731a163a43258d5620820127357d250de60b16b074d0a5c.png" />
+</figure>
+<p>Show that <span class="math notranslate nohighlight">\(y^{\prime\prime}=0\)</span> when <span class="math notranslate nohighlight">\(t=\ln(b)/c\)</span>. What is the significance of this result?</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="differentiation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Differentiation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="integration.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Integration</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tangent-and-normal">3.1. Tangent and normal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stationary-points">3.2. Stationary points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gompertz">3.3. Gompertz</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ella Metcalfe
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

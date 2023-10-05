@@ -1,0 +1,720 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Logarithms &#8212; PreU Mathematics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'files/logarithms';</script>
+    <link rel="shortcut icon" href="../_static/two.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="3. Exponential trends" href="exponentials.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/two.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/two.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="growth.html">1. Growth models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rates.html">2. Rates of change</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exponentials.html">3. Exponential trends</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Logarithms</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Logarithms</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">4.1. Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-results">4.2. Useful results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logplots">4.3. Logplots</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="logarithms">
+<h1><span class="section-number">4. </span>Logarithms<a class="headerlink" href="#logarithms" title="Permalink to this heading">#</a></h1>
+<p>We now turn our interest to the <em>inverse</em> of the exponential function, which poses the following problem:</p>
+<blockquote>
+<div><p>Given a certain value <span class="math notranslate nohighlight">\(y\)</span>, what value of <span class="math notranslate nohighlight">\(x\)</span> satisfies the relationship <span class="math notranslate nohighlight">\(y=e^x\)</span> ?</p>
+</div></blockquote>
+<p>We will need to solve this problem to do algebra involving exponentials. Defining the exponential without its inverse would be like defining multiplication without division. In non-mathematical terms it would be like having the ability to put your shoes on but no way to take them off again!</p>
+<p>After working through this chapter you should be able to:</p>
+<ul class="simple">
+<li><p>Manipulate logarithms and use them to “find the unknown” in problems involving exponentials</p></li>
+<li><p>Recognise why it might be useful to use a logplot, and give an example of where they might be used</p></li>
+</ul>
+<section id="definition">
+<h2><span class="section-number">4.1. </span>Definition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h2>
+<p>Thinking about the <code class="docutils literal notranslate"><span class="pre">(input,output)</span></code> relationship of the exponential function, we can see that the inverse <code class="docutils literal notranslate"><span class="pre">(output,input)</span></code> graph can be obtained by swapping the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes. This is equivalent to a reflection in the line <span class="math notranslate nohighlight">\(y=x\)</span>, as shown in the figure below. This relationship with the inverse is true for all functions. For example, the graph of the square root function can be obtained by reflecting the squared function in the line <span class="math notranslate nohighlight">\(y=x\)</span>.</p>
+<p>We call the inverse of the (natural) exponential function the natural logarithm, and we denote it by <span class="math notranslate nohighlight">\(\ln(x)\)</span>.</p>
+<figure class="align-default" id="exp03">
+<img alt="../_images/e8fd90dc9323ad28d7a5b727fad26ac600a66e139f69d315afe8bca6827e2473.png" src="../_images/e8fd90dc9323ad28d7a5b727fad26ac600a66e139f69d315afe8bca6827e2473.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">The exponential function together with its inverse.</span><a class="headerlink" href="#exp03" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We can get an estimate of the natural logarithm by reading off from the graph. For instance, we can see that <span class="math notranslate nohighlight">\(e^x=2\)</span> is obtained when <span class="math notranslate nohighlight">\(x\)</span> is roughly equal to 0.7. We can obtain a more precise result by bracketing the value:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(x\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(e^x-2\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.6931</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.6932</p></td>
+<td><p>+</p></td>
+</tr>
+</tbody>
+</table>
+<p>The value lies between (0.6931,0.6932) so we can conclude that it is 0.693 to 3 decimal places. Your calculator can give you a more accurate value for <code class="docutils literal notranslate"><span class="pre">ln(2)</span></code>.</p>
+<p>We can also find the logarithm in different bases, using the notation <span class="math notranslate nohighlight">\(\ln_k\)</span>. For the logarithm in base 10, the subscript is often omitted. Due to the way that we have defined the logarithm as the inverse of the exponential function we can say that the following two expressions are logically equivalent, as indicated by the symbol <span class="math notranslate nohighlight">\(\iff\)</span>, which can be read as “implies and implies that”:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-33ecfa50-a8f5-47c0-8d09-a4098a604175">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-33ecfa50-a8f5-47c0-8d09-a4098a604175" title="Permalink to this equation">#</a></span>\[\begin{equation}
+y=\log_k(x) \quad \iff \quad k^y=x.
+\end{equation}\]</div>
+<div class="exercise admonition" id="files/logarithms-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.1 </span></p>
+<section id="exercise-content">
+<p>Without using a calculator, what is the value of <br>
+(a) <span class="math notranslate nohighlight">\(\log{100}\qquad\)</span> (b) <span class="math notranslate nohighlight">\(\log{1000}\qquad\)</span> (c) <span class="math notranslate nohighlight">\(\ln_3{27}\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>(a) The answer is 2, since <span class="math notranslate nohighlight">\(10^2=100\)</span><br>
+(b) The answer is 3, since <span class="math notranslate nohighlight">\(10^3=1000\)</span><br>
+(c) The answer is 3, since <span class="math notranslate nohighlight">\(3^3=27\)</span></p>
+</div>
+<p>We use logarithm in base 10 when we want to think in decimal terms (e.g. finance) or about orders of magnitude. The logarithm in base <span class="math notranslate nohighlight">\(e\)</span> is used much more frequently in sciences, due to the self-equivalent growth rate property of the natural exponent.</p>
+</section>
+<section id="useful-results">
+<h2><span class="section-number">4.2. </span>Useful results<a class="headerlink" href="#useful-results" title="Permalink to this heading">#</a></h2>
+<p>We can combine the exponential and logarithm into a single result, which highlights the way that inverse functions work:</p>
+<div class="math notranslate nohighlight" id="equation-lnexp">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-lnexp" title="Permalink to this equation">#</a></span>\[x=e^{\ln(x)} \qquad \text{ or } \qquad x=\ln(e^{x}).\]</div>
+<p>In either of the two forms above, we see that applying one function followed by its inverse takes us back to where we started. In non-mathematical terms it’s like putting your shoes on and then taking them off again.</p>
+<p>We can use this result to derive some further relationships.</p>
+<h2>Change of base</h2>
+<p>The following result shows that <span class="math notranslate nohighlight">\(k^x\)</span> is obtained by stretching out <span class="math notranslate nohighlight">\(e^x\)</span> by a factor of <span class="math notranslate nohighlight">\(\ln(k)\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eq-expln">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-eq-expln" title="Permalink to this equation">#</a></span>\[k^x=\left(e^{\ln(k)}\right)^x = e^{\lambda x}, \quad \lambda=\ln(k)\]</div>
+<div class="exercise admonition" id="files/logarithms-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.2 </span></p>
+<section id="exercise-content">
+<p>Can you use this finding to explain the result given in <a class="reference internal" href="exponentials.html#equation-eq-ln2">(3.7)</a>, which showed that the relative growth rate of <span class="math notranslate nohighlight">\(2^x\)</span> is roughly 0.693 ?</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>According to our finding at the end of the chapter on exponentials, the relative growth rate of <span class="math notranslate nohighlight">\(e^{\lambda x}\)</span> is <span class="math notranslate nohighlight">\(\lambda\)</span></p>
+<p>We have now shown that <span class="math notranslate nohighlight">\(2^x\)</span> is equivalent to <span class="math notranslate nohighlight">\(e^{\lambda x}\)</span> where <span class="math notranslate nohighlight">\(\lambda=\ln(2)\)</span>, therefore the relative growth rate of <span class="math notranslate nohighlight">\(2^x\)</span> is equal to <span class="math notranslate nohighlight">\(\ln(2)\)</span>, which is 0.693, given to 3 decimal places.</p>
+</div>
+<p>We can also use <a class="reference internal" href="#equation-eq-expln">(4.3)</a> to obtain a result that relates the log in base <span class="math notranslate nohighlight">\(k\)</span> to the natural logarithm:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-10796aaf-3950-4ea1-bf2d-da42ea343b18">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-10796aaf-3950-4ea1-bf2d-da42ea343b18" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\log_k(x) = \frac{\ln(x)}{\ln(k)}
+\end{equation}\]</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Proof</p>
+<p>To derive the result we start by writing out the following equivalent relationships:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+y=\log_k(x) \quad \iff \quad x=k^y=e^{\ln(k)y} 
+\end{equation*}\]</div>
+<p>Taking the logarithm of both sides in the final expression then gives the result:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\ln(x)=y\ln(x) \quad \iff \quad y=\frac{\ln(x)}{\ln(k)}.
+\end{equation*}\]</div>
+</div>
+<h2>Laws of logarithms</h2>
+<p>We can use the relationship between the exponential function and its inverse to derive the following three results, which apply in any base. The proofs of these results are not given, but are similar to those given above.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\log(ab) = \log(a)+\log(b)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\log(x^n) = n\log(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\log(a/b) = \log(a)-\log(b)\)</span></p></li>
+</ul>
+<h2>Problems for you to try</h2>
+<p><strong>[1]</strong> Write the expression <span class="math notranslate nohighlight">\(\log(32)-3\log(4)+\log(3)\)</span> as a single logarithm</p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p><span class="math notranslate nohighlight">\(\log\left(\frac{32\times 3}{4^4}\right)=\log\left(\frac{3}{2}\right)\)</span></p>
+</div>
+<p><strong>[2]</strong> Find the value of <span class="math notranslate nohighlight">\(x\)</span> for which <span class="math notranslate nohighlight">\(\log_2(x^2+4x+3)-\log_2(x^2+x)=4\)</span></p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p><span class="math notranslate nohighlight">\(\log_2\left(\frac{x^2+4x+3}{x^2+x}\right)=4\)</span> gives <span class="math notranslate nohighlight">\(\frac{x^2+4x+3}{x^2+x}=2^4\)</span>.</p>
+<p>This which rearranges to a quadratic with solutions <span class="math notranslate nohighlight">\(x=-1\)</span>, <span class="math notranslate nohighlight">\(x=1/5\)</span>.</p>
+<p>The negative solution is not applicable. Why?</p>
+</div>
+<p><strong>[3]</strong> Solve the problem <span class="math notranslate nohighlight">\(3^x=8\)</span> by taking logarithms</p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p><span class="math notranslate nohighlight">\(x\log(3)=\log(8)\)</span> gives <span class="math notranslate nohighlight">\(x=\frac{\log(8)}{\log(3)}=1.89\)</span> (3sf)</p>
+</div>
+<p><strong>[4]</strong> Calculate the result <span class="math notranslate nohighlight">\(\log_7(29)\)</span> in terms of the natural logarithm</p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p><span class="math notranslate nohighlight">\(\log_7(29)=\frac{\ln(20)}{\ln(7)}\)</span> or we can solve this problem as follows:</p>
+<p>Let <span class="math notranslate nohighlight">\(y=\log_7(29)\)</span>. Then <span class="math notranslate nohighlight">\(7^y=29\)</span>.</p>
+<p>Using <span class="math notranslate nohighlight">\(7=e^{\ln(7)}\)</span> gives <span class="math notranslate nohighlight">\(y\ln(7)=29\)</span> from which the result is immediately obtained.</p>
+</div>
+<p><strong>[5]</strong> Solve the problem <span class="math notranslate nohighlight">\(\log(x)+\ln(x)=2\)</span></p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p><span class="math notranslate nohighlight">\(\frac{\ln(x)}{\ln(10)}+\ln(x)=2\)</span> gives <span class="math notranslate nohighlight">\(\ln(x)=\frac{2\ln(10)}{1+\ln(10)}\)</span>,</p>
+<p>So <span class="math notranslate nohighlight">\(x=\exp\left(\frac{2\ln(10)}{1+\ln(10)}\right)=4.03\)</span> (3sf)</p>
+</div>
+<p><strong>[6]</strong> The hyperbolic cosine function is defined as <span class="math notranslate nohighlight">\(\cosh(x)=\frac{1}{2}(e^x+e^{-x})\)</span>. By rewriting the equation <span class="math notranslate nohighlight">\(\cosh(x)=4\)</span> as a disguised quadratic in <span class="math notranslate nohighlight">\(e^x\)</span>, solve to find the two possible values of <span class="math notranslate nohighlight">\(x\)</span>. Give your answers as exact values involving the natural logarithm.</p>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>The given problem is <span class="math notranslate nohighlight">\(\frac{1}{2}(e^x+e^{-x})=4\)</span>.</p>
+<p>By taking <span class="math notranslate nohighlight">\(y=e^{x}\)</span> we can write this as <span class="math notranslate nohighlight">\(y+\frac{1}{y}=8\)</span>.</p>
+<p>This can be rearranged as <span class="math notranslate nohighlight">\(y^2-8y+1=0\)</span> with solutions <span class="math notranslate nohighlight">\(y=4\pm \sqrt{15}\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(y=e^{x}\)</span> the solutions to the given problem are <span class="math notranslate nohighlight">\(x=\ln(4\pm\sqrt{15})\)</span>.</p>
+</div>
+</section>
+<section id="logplots">
+<h2><span class="section-number">4.3. </span>Logplots<a class="headerlink" href="#logplots" title="Permalink to this heading">#</a></h2>
+<p>If a given variable spans several orders of magnitude then when we plot it on a linear scale we may find that the plot is not very easy to read. In that case it may be helpful to plot one of the variables on a logarithmic scale. We normally use a base 10 logarithmic scale as we are more familiar with scale visualisations using powers of 10.</p>
+<p>Two examples are given below.</p>
+<h2>Earthquakes</h2>
+<p>The Gutenberg-Richter (GR) law predicts that in any given region and time period, the number of earthquakes that are at <em>least</em> Richter magnitude <span class="math notranslate nohighlight">\(x\)</span> is given by the following relationship, where <span class="math notranslate nohighlight">\(\alpha,\beta\)</span> are constants:</p>
+<div class="math notranslate nohighlight">
+\[N_x=\alpha e^{-\beta x}\]</div>
+<p>Therefore a plot of <span class="math notranslate nohighlight">\(\ln(N_x)\)</span> against <span class="math notranslate nohighlight">\(x\)</span> is expected to follow a decreasing linear trend. Taking the natural logarithm of the proposed relationship gives</p>
+<div class="math notranslate nohighlight">
+\[\ln(N_x)=\ln(\alpha)-\beta x\]</div>
+<p>The plot below is based on 8,402 Richter scale measurements for magnitude 3+ earthquakes that were recorded in California from 1960 to 2014. These data were downloaded from the U.S Geological Survey <a class="reference external" href="https://www.usgs.gov/">www.usgs.gov</a>. A straight line has been fitted to the data, from which the constants <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> can be estimated. The data appear to fit the GR law very well!</p>
+<figure class="align-default">
+<img alt="../_images/a3dcd1c124800d52cbc132888161a34ae0fd4a72ebf8376dbee15ac3db2a948b.png" src="../_images/a3dcd1c124800d52cbc132888161a34ae0fd4a72ebf8376dbee15ac3db2a948b.png" />
+</figure>
+<p>It can be seen from the graph that every unit increase in the Richter value corresponds to approximately a factor 10 decrease in the number of earthquakes.</p>
+<div class="exercise admonition" id="files/logarithms-exercise-2">
+
+<p class="admonition-title"><span class="caption-number">Exercise 4.3 </span></p>
+<section id="exercise-content">
+<p>Estimate the value of <span class="math notranslate nohighlight">\(\beta\)</span> using the plot. Note that the vertical axis uses a scale that is logarithmic in base 10, whilst the GR is logarithmic in base <span class="math notranslate nohighlight">\(e\)</span>.</p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>We can use two points forming a triangle, such as the one illustrated below:</p>
+<figure class="align-default">
+<img alt="../_images/9a254a36f485c2f36579d37f8d43b35587af41fff5ad86d9514cac5e9941abad.png" src="../_images/9a254a36f485c2f36579d37f8d43b35587af41fff5ad86d9514cac5e9941abad.png" />
+</figure>
+<p>From the triangle,</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\beta\sim \frac{\ln(10^6)-\ln(10)^0}{7.8-1}=2.03
+\end{equation*}\]</div>
+<p>The estimated value of <span class="math notranslate nohighlight">\(\alpha\)</span> can be read from the vertical axis, though this is a bit difficult to obtain accurately.</p>
+</div>
+<h2>Molecular binding</h2>
+<p>A biological sample with a concentration of <span class="math notranslate nohighlight">\(N\)</span> receptors per mg of tissue is immersed in a solution containing a drug (ligand) at concentration <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<p>We may partition the receptor concentration into bound and free receptors per mg of tissue, using subscripts to denote these concentrations:</p>
+<div class="math notranslate nohighlight" id="equation-npart">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-npart" title="Permalink to this equation">#</a></span>\[N=N_b+N_f\]</div>
+<p>According to the ‘lock and key’ model, the ligand (key) binds to the receptors (locks) in proportion to the concentration of receptors that remain free and to the ligand concentration. We may write this as follows where <span class="math notranslate nohighlight">\(k_a\)</span> is the constant of proportionality for the reaction, which is called the <a class="reference external" href="https://en.wikipedia.org/wiki/Binding_constant">affinity constant</a>:</p>
+<div class="math notranslate nohighlight" id="equation-mass-action">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-mass-action" title="Permalink to this equation">#</a></span>\[N_b = k_a c N_f\]</div>
+<p>By substituting for <span class="math notranslate nohighlight">\(N_f\)</span> from <a class="reference internal" href="#equation-npart">(4.5)</a> and rearranging, we obtain</p>
+<div class="math notranslate nohighlight" id="equation-nb">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-nb" title="Permalink to this equation">#</a></span>\[N_b=\frac{k_a c N}{1+k_a c} =\frac{c N}{k_d+c}, \qquad k_d=1/k_a.\]</div>
+<p>The value <span class="math notranslate nohighlight">\(k_d\)</span> introduced in the rearrangement is called the <em>dissociation constant</em>. Notice that <span class="math notranslate nohighlight">\(k_d\)</span> must have the same dimensional units as <span class="math notranslate nohighlight">\(c\)</span> in order for the units in the equation to balance. The concentration is typically measured in molarities (M=mol/l). For more information, see (e.g) <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3000649/">this paper</a></p>
+<p>A plot of <span class="math notranslate nohighlight">\(N_b\)</span> as a function of the concentration <span class="math notranslate nohighlight">\(c\)</span> is shown below, for particular values of the other constants.</p>
+<figure class="align-default" id="id1">
+<img alt="../_images/f19d4c69bf49fa945b886df25f0378c8c35d5f2e6fd46dc259bc787dd4ec94ca.png" src="../_images/f19d4c69bf49fa945b886df25f0378c8c35d5f2e6fd46dc259bc787dd4ec94ca.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Molecular binding as a function of concentration, for <span class="math notranslate nohighlight">\(k_d=0.05\text{ nM}\)</span> and <span class="math notranslate nohighlight">\(N=1.4\text{ pmol/mg}\)</span></span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>It can be seen that the receptors approach full occupancy <span class="math notranslate nohighlight">\(N_b=N\)</span> as the concentration increases. This can be anticipated from <a class="reference internal" href="#equation-nb">(4.7)</a>, by writing</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+N_b = \frac{cN}{k_d+c} = \frac{N}{1+k_d/c}
+\end{equation*}\]</div>
+<p>As <span class="math notranslate nohighlight">\(c\)</span> becomes large, the ratio <span class="math notranslate nohighlight">\(k_d/c\)</span> shrinks towards zero and so <span class="math notranslate nohighlight">\(N_b\)</span> approaches <span class="math notranslate nohighlight">\(N/(1_0)\)</span>. We will examine this idea in more detail when we study limits.</p>
+<p>At half occupancy, <span class="math notranslate nohighlight">\(N_b=N/2\)</span>, which gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+\frac{1}{2}=\frac{c}{k_d+c} \quad \Rightarrow k_d=c
+\end{equation*}\]</div>
+<p>We see that the dissociation constant has the nice property that it is equal to the concentration at which half the receptors are bound.</p>
+<p>It would be nice to illustrate this on the plot, but everything is bunched up near to the left-hand side. We can spread things out by plotting the horizontal axis values on a <em>logarithmic</em> scale, as shown below:</p>
+<figure class="align-default" id="molinflect">
+<img alt="../_images/e7cf5f832a7801ea1638c1f8c80d349a92ef26bf268f417055e1eb1692f917a9.png" src="../_images/e7cf5f832a7801ea1638c1f8c80d349a92ef26bf268f417055e1eb1692f917a9.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Molecular binding as a function of logscale concentration. The red lines indicate the concentrations required for <span class="math notranslate nohighlight">\(N_b=N/2\)</span> and <span class="math notranslate nohighlight">\(N_b=N/4\)</span>.</span><a class="headerlink" href="#molinflect" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The horizontal axis has been scaled so that powers of 10 are equally spaced. This is useful for reading off data at lower concentrations. For this reason, logscale plots are sometimes used in molecular biology.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Although logscale plots are useful for illustrating data across a range of scales, they can be difficult to interpret as they change the shape of the plotted data. For example, the apparent inflection point shown in <a class="reference internal" href="#molinflect"><span class="std std-numref">Fig. 4.3</span></a> is an artifical feature introduced by taking the log of the concentration values.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="exponentials.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Exponential trends</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">4.1. Definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-results">4.2. Useful results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logplots">4.3. Logplots</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ella Metcalfe
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

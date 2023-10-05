@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5. Integration techniques &#8212; PreU Mathematics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'files/integration_techniques';</script>
+    <link rel="shortcut icon" href="../_static/logo-light.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. The sofa challenge" href="sofa.html" />
+    <link rel="prev" title="4. Integration" href="integration.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><h1>PreU Mathematics</h1></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.instagram.com/ucl.natsci/?hl=en-gb" title="insta" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-instagram"></i></span>
+            <label class="sr-only">insta</label></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.ucl.ac.uk/natural-sciences/" title="natsci" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static\ns_logo.png" class="icon-link-image" alt="natsci"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/three.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/three.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="limits.html">1. Know your limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differentiation.html">2. Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="derivative_applications.html">3. Derivative applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration.html">4. Integration</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Integration techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sofa.html">6. The sofa challenge</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Integration techniques</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> On this page </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substitution">5.1. Substitution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#by-parts">5.2. By parts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduction-formulae">5.3. Reduction formulae</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="integration-techniques">
+<h1><span class="section-number">5. </span>Integration techniques<a class="headerlink" href="#integration-techniques" title="Permalink to this heading">#</a></h1>
+<p>This is a non-exhaustive list of integration techniques that are commonly used. You should be familiar with all three of the techniques listed here, and be able to apply them.</p>
+<section id="substitution">
+<h2><span class="section-number">5.1. </span>Substitution<a class="headerlink" href="#substitution" title="Permalink to this heading">#</a></h2>
+<p>These results can be proved using the chain rule and fundamental theorem of calculus.</p>
+<p>For an indefinite integral:</p>
+<div class="math notranslate nohighlight" id="equation-substit">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-substit" title="Permalink to this equation">#</a></span>\[\int f(x) \textrm{d}x = \int f(x) \frac{\mathrm{d}x}{\mathrm{d}u}\mathrm{d}u+c\]</div>
+<p>For a definite integral:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ecffc68d-176a-4c32-8afa-325885e902b7">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-ecffc68d-176a-4c32-8afa-325885e902b7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\int_a^b f\mathrm{d}x= \int_{u(a)}^{u(b)}f\frac{\mathrm{d}x}{\mathrm{d}u}\mathrm{d}u
+\end{equation}\]</div>
+<p><em>Don’t forget to change the limits for definite integration!</em></p>
+<p>The idea of using a substitution is that we convert a difficult integral <span class="math notranslate nohighlight">\(\mathrm{d}x\)</span> to an easier one <span class="math notranslate nohighlight">\(\mathrm{d}u\)</span>, through careful choice of <span class="math notranslate nohighlight">\(u\)</span>. Often we choose <span class="math notranslate nohighlight">\(u\)</span> so that its derivative cancels out a factor in <span class="math notranslate nohighlight">\(f\)</span>, noting that the integrand in <a class="reference internal" href="#equation-substit">(5.1)</a> can be written as:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d107e27f-f417-4681-9fcb-b417e5186c76">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-d107e27f-f417-4681-9fcb-b417e5186c76" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f \frac{\mathrm{d}x}{\mathrm{d}u}=f\biggr/\frac{\mathrm{d}u}{\mathrm{d}x}
+\end{equation}\]</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example: <span class="math notranslate nohighlight">\( \displaystyle \int x\sqrt{x^2-1}\mathrm{d}x\)</span></p>
+<p>We can try the substitution <span class="math notranslate nohighlight">\(u=x^2-1\)</span>.</p>
+<p>This will eliminate the factor <span class="math notranslate nohighlight">\(x\)</span> and will simplify the expression <span class="math notranslate nohighlight">\(\sqrt{x^2-1}\)</span>. We find that:</p>
+<p><span class="math notranslate nohighlight">\(\displaystyle  \frac{\mathrm{d}u}{\mathrm{d}x}=2x\)</span> and so <span class="math notranslate nohighlight">\(\displaystyle \frac{\mathrm{d}x}{\mathrm{d}u}=\frac{1}{2x}\)</span>, hence:</p>
+<div class="math notranslate nohighlight">
+\[\int x\sqrt{x^2-1}\mathrm{d}x=\displaystyle \int\frac{1}{2}u^{1/2}\mathrm{d}u=\frac{1}{3}u^{3/2}+c=\frac{1}{3}(x^2-1)^{3/2}+c\]</div>
+<p>This is the same result we can find by inspection.</p>
+</div>
+<div class="exercise admonition" id="files/integration_techniques-exercise-0">
+
+<p class="admonition-title"><span class="caption-number">Exercise 5.1 </span></p>
+<section id="exercise-content">
+<p>(a) Find <span class="math notranslate nohighlight">\( I= \displaystyle\int_1^3\frac{1}{2x+1}\mathrm{d}x\)</span>.</p>
+<p>(b) Find <span class="math notranslate nohighlight">\( I= \displaystyle\int (ax+b)(cx+d)^n\mathrm{d}x\)</span> using the substitution <span class="math notranslate nohighlight">\(u=cx+d\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (a)</p>
+<p>To calculate the definite integral <span class="math notranslate nohighlight">\( I=\displaystyle \int_1^3\frac{1}{2x+1}\mathrm{d}x\)</span>, we will use the substitution <span class="math notranslate nohighlight">\(u=2x+1\)</span>. This problem could also be solved by inspection.</p>
+<p>When <span class="math notranslate nohighlight">\(x=1\)</span>, <span class="math notranslate nohighlight">\(u=3\)</span> and when <span class="math notranslate nohighlight">\(x=3\)</span>, <span class="math notranslate nohighlight">\(u=7\)</span>, hence, the result is</p>
+<div class="math notranslate nohighlight">
+\[I=\int_{u=3}^{u=7}\frac{1}{u}\biggr/\frac{\mathrm{d}u}{\mathrm{d}x}\mathrm{d}u =\frac{1}{2} \int_3^7\frac{1}{u}\mathrm{d}u=\frac{1}{2}\biggr[\ln(u)\biggr]_3^7=\frac{1}{2}\ln\biggr(\frac{7}{3}\biggr)\]</div>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (b)</p>
+<p>To calculate an expression of the form <span class="math notranslate nohighlight">\( I=\displaystyle \int (ax+b)(cx+d)^n\mathrm{d}x\)</span> we can make the substitution <span class="math notranslate nohighlight">\(u=cx+d\)</span>, which gives:</p>
+<div class="math notranslate nohighlight">
+\[I=\int\left(a\frac{u-d}{c}+b\right)u^n\frac{1}{c}\mathrm{d}u=\frac{1}{c^2}e \int(au+bc-ad)u^n\mathrm{d}u\]</div>
+<p>By polynomial expansion:</p>
+<div class="math notranslate nohighlight">
+\[I=\frac{1}{c^2}\int(a u^{n+1}+(bc-ad)u^n)\mathrm{d}u=\frac{1}{c^2}\left[\frac{a u^{n+2}}{n+2}+\frac{bc-ad}{n+1}u^{n+1}\right]\]</div>
+<p>Rewriting in terms of <span class="math notranslate nohighlight">\(x\)</span> finally gives:</p>
+<div class="math notranslate nohighlight">
+\[I = \frac{(cx+d)^{n+1}}{c^2}\left[\frac{a(cx+d)}{n+2}+\frac{bc-ad}{n+1}\right]\]</div>
+</div>
+</section>
+<section id="by-parts">
+<h2><span class="section-number">5.2. </span>By parts<a class="headerlink" href="#by-parts" title="Permalink to this heading">#</a></h2>
+<p>The following definitions can be proved using the product rule and fundamental theorem of calculus.</p>
+<p>For an indefinite integral:</p>
+<div class="math notranslate nohighlight">
+\[\int u\,\frac{\mathrm{d}v}{\mathrm{d}x}\,\mathrm{d}x = u\,v- \int v\,\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x+c\]</div>
+<p>For a definite integral:</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b u\,\frac{\mathrm{d}v}{\mathrm{d}x}\,\mathrm{d}x=\biggr[u\,v\biggr]_a^b- \int_a^b v\frac{\mathrm{d}u}{\mathrm{d}x}\,\mathrm{d}x\]</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Proof</p>
+<p>According to the product rule:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathrm{d}(u\,v) = u\,\mathrm{d}\,v + v\,\mathrm{d}u  \qquad &amp;\implies  
+\int u\,\mathrm{d}\,v = \int \mathrm{d}(u\,v) - \int v\,\mathrm{d}u \\
+&amp;\implies \int u\,\mathrm{d}\,v  = u\,v - \int v\,\mathrm{d}u\end{split}\]</div>
+</div>
+<p>For a handy rule of thumb for choosing which term to differentiate when applying this method, we can use <strong>LIATE</strong> method:</p>
+<ul class="simple">
+<li><p><strong>L</strong>ogarithmic Term</p></li>
+<li><p><strong>I</strong>nverse Term</p></li>
+<li><p><strong>A</strong>lgebraic Term</p></li>
+<li><p><strong>T</strong>rignometric Term</p></li>
+<li><p><strong>E</strong>xponential Term</p></li>
+</ul>
+<p>This list tells the order of preference for the term to be differentiated <span class="math notranslate nohighlight">\(u(x) \rightarrow u'(x)\)</span>. The exponential function is at the bottom of the list because it is usually the easiest to integrate. The logarithmic term is at the top beccause it is usually the hardest.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example: <span class="math notranslate nohighlight">\(\displaystyle I = \int x \ln(x)\,\mathrm{d}x \)</span></p>
+<p>We will use integration by parts to find the following integral:</p>
+<p>Since <strong>L</strong> falls before <strong>A</strong> in <strong>LIATE</strong>, we pick:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u = \ln(x),\quad &amp; v' = x\\ 
+u' = \frac{1}{x}, \quad &amp; v = \frac{1}{2}x^2\end{split}\]</div>
+<p>and so integrating by parts we find:</p>
+<div class="math notranslate nohighlight">
+\[I = \frac{1}{2} \,x^2 \,\ln(x) - \int \frac{1}{2} \,x \,\mathrm{d}x  = \frac{1}{2} \, x^2 \left(\ln(x) - \frac{1}{2} \right) + C\]</div>
+</div>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example: <span class="math notranslate nohighlight">\(\displaystyle I = \int \ln(x)\,\mathrm{d}x \)</span></p>
+<p>Here, we note that we can rewrite the integral as</p>
+<div class="math notranslate nohighlight">
+\[I = \int x^0\,\ln(x)\,\mathrm{d}x \]</div>
+<p>Since <strong>L</strong> falls before <strong>A</strong> in <strong>LIATE</strong>, we pick:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}u = \ln(x),\quad &amp; v' = x^0 \\ 
+u' = \frac{1}{x},\quad &amp;v = x^1\end{split}\]</div>
+<p>and so integrating by parts we find:</p>
+<div class="math notranslate nohighlight">
+\[I = x \ln(x) - \int \frac{x}{x}\,\mathrm{d}x  = x\ln(x) - \int x^0\,\mathrm{d}x  = x\ln(x) - x + C \]</div>
+</div>
+<div class="exercise admonition" id="files/integration_techniques-exercise-1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 5.2 </span></p>
+<section id="exercise-content">
+<p>Integrate the following problems by parts:</p>
+<p>(a) <span class="math notranslate nohighlight">\(\displaystyle \int x e^{-x}\mathrm{d}x\qquad \qquad \)</span>
+(b) <span class="math notranslate nohighlight">\(\displaystyle \int x^2 e^{-x}\mathrm{d}x\)</span></p>
+</section>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (a)</p>
+<p>Let <span class="math notranslate nohighlight">\(u=x,\ v'=e^{-x}\)</span> then:</p>
+<p><span class="math notranslate nohighlight">\(u'=1\)</span>, which is simpler and <span class="math notranslate nohighlight">\(v=-e^{-x}\)</span> which is no more complicated, so:</p>
+<div class="math notranslate nohighlight">
+\[\int x e^{-x}\mathrm{d}x = -x e^{-x}+ \int e^{-x}\mathrm{d}x = -e^{-x}(x+1)+C\]</div>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (b)</p>
+<p>Let <span class="math notranslate nohighlight">\(u=x^2,\, v'=e^{-x}\)</span>, then:</p>
+<p><span class="math notranslate nohighlight">\(u'=2x\)</span>, which is simpler and <span class="math notranslate nohighlight">\(v=-e^{-x}\)</span>, which is no more complicated, so:</p>
+<div class="math notranslate nohighlight">
+\[\int x^2 e^{-x}\mathrm{d}x=-x^2 e^{-x}+2\int x e^{-x}\mathrm{d}x\]</div>
+<p>From the previous example, we know the result of this integrand is:</p>
+<div class="math notranslate nohighlight">
+\[\int x e^{-x}\mathrm{d}x = -e^{-x}(x+1)+C\]</div>
+<p>and therefore we find:</p>
+<div class="math notranslate nohighlight">
+\[ \int x^2 e^{-x}\mathrm{d}x=-e^{-x}(x^2+2x+2)\]</div>
+</div>
+</section>
+<section id="reduction-formulae">
+<h2><span class="section-number">5.3. </span>Reduction formulae<a class="headerlink" href="#reduction-formulae" title="Permalink to this heading">#</a></h2>
+<p>Reduction formulae set up a recurrence relation between different integrands:</p>
+<div class="math notranslate nohighlight">
+\[I_{n} = f(n,x) + I_{n-a} \]</div>
+<p>where <span class="math notranslate nohighlight">\(a,\,n\)</span> are integers typically and <span class="math notranslate nohighlight">\(a &lt; n\)</span>.  Usually we solve these problems by integration by parts.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Worked example: <span class="math notranslate nohighlight">\(\displaystyle I_n = \int_0^\infty x^n\,e^{-x}\,\mathrm{d} x\)</span></p>
+<p>We can integrate by parts (using <strong>LIATE</strong> if necessary):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lcl}
+u(x) = x^n &amp;&amp; v'(x) = e^{-x} \\
+u'(x) = nx^{n-1} &amp;&amp; v(x)  =  -e^{-x} 
+\end{array}\end{split}\]</div>
+<p>Which means that we can write:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_n  &amp;= \bigg[-x^n\,e^{-x}\bigg]_0^\infty + n\int_0^\infty x^{n-1}\, e^{-x}\,\mathrm{d} x \\ 
+I_n  &amp;= 0 + n I_{n-1}\end{split}\]</div>
+<p>If we were to repeat the integration by parts repeatedly we would find:</p>
+<div class="math notranslate nohighlight">
+\[I_n = nI_{n-1} = n(n-1)\,I_{n-2} = \dots = n(n-1)(n-2)\dots (2)(1)\,I_0 = n!\, I_0\]</div>
+<p><span class="math notranslate nohighlight">\(I_0\)</span> is a good place to stop, since we can evaluate it:</p>
+<div class="math notranslate nohighlight">
+\[I_0 = \int_0^\infty e^{-x}\,\mathrm{d} x = \bigg[-e^{-x}\bigg]_0^\infty = 0 - (-1) = 1\]</div>
+<p>Hence <span class="math notranslate nohighlight">\(I_n = n!\)</span>.</p>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (a)</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int x^n e^x\mathrm{d}x \]</div>
+<p>Integrating by parts:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lcl}
+u(x) = x^n &amp;&amp; v'(x) = e^x \\
+u'(x) = nx^{n-1} &amp;&amp; v(x) = e^x
+\end{array}\end{split}\]</div>
+<p>and therefore:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int x^n e^x\mathrm{d}x = x^n e^x - n \int x^{n-1}e^x\mathrm{d}x\]</div>
+<p>Hence the reccurence relation is</p>
+<div class="math notranslate nohighlight">
+\[I_n = x^n e^x - n I_{n-1}\]</div>
+<p>Which means that:</p>
+<div class="math notranslate nohighlight">
+\[I_0 = \displaystyle \int e^x\mathrm{d}x = e^x + C\]</div>
+<p>and so <span class="math notranslate nohighlight">\(I_4\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_4 &amp;= e^x(x^4- 4x^3+4(3)x^2 - 4(3)(2)x +4(3)(2)(1))+C\\
+&amp;= e^x(x^4- 4x^3+12x^2 - 24x +24)+C\end{split}\]</div>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (b)</p>
+<div class="math notranslate nohighlight">
+\[I_n = \int_0^{\pi/2}\cos^{n}(x)\mathrm{d}x = \int_0^{\pi/2}\cos(x)\cos^{n-1}(x)\mathrm{d}x\]</div>
+<p>Integrating by parts:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lcl}
+u(x)= \cos^{n-1}(x) &amp;&amp; v'(x) = \cos(x) \\
+u'(x) = -(n-1)\cos^{n-2}(x)\sin(x) &amp;&amp; v(x) = \sin(x)
+\end{array}\end{split}\]</div>
+<p>and therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_n &amp;= \left[\sin(x)\cos^{n-1}(x)\right]_0^{\pi/2} + (n-1) \int_0^{\pi/2}\sin(x)\cos^{n-2}(x)\sin(x)\mathrm{d}x \\
+&amp;=(0-0)+(n-1)\displaystyle \int\sin^2\cos^{n-2}(x)\mathrm{d}x \\
+&amp;=(n-1)\displaystyle \int(1-\cos^2(x)\cos^{n-2}(x)\mathrm{d}x \\
+&amp;=(n-1)(I_{n-2}-I_n)\end{split}\]</div>
+<p>Rearranging gives:</p>
+<div class="math notranslate nohighlight">
+\[I_n = \frac{n-1}{n}I_{n-2}\]</div>
+<p>and so for <span class="math notranslate nohighlight">\(I_{10}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[I_{10} = \frac{9}{10}I_8 = \frac{9}{10}\frac{7}{8}I_6 = \dots = \frac{9\times7\times5\times3\times1}{10\times8\times6\times4\times2}I_0\]</div>
+<p>Finally, noting the result for <span class="math notranslate nohighlight">\(I_0\)</span> gives the result for <span class="math notranslate nohighlight">\(I_{10}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[I_0 = \int_0^{\pi/2}\mathrm{d}x = \frac{\pi}{2} \qquad \implies \qquad I_{10} = \frac{63\pi}{256}\]</div>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (c)</p>
+<p>There may be a temptation to try to expand out the bracket or integrate by parts straight away, however the easier
+method is to break up the integrand into <span class="math notranslate nohighlight">\((1-x^3)^{n-1}\,(1-x^3)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I &amp;= \int_0^1 (1-x^3)^{n-1}\,\mathrm{d} x -\int_0^1 x^3\,(1-x^3)^{n-1}\,\mathrm{d} x \\ 
+&amp;= I_{n-1} - \int_0^1 x\,x^2\,(1-x^3)^{n-1}\,\mathrm{d} x \\ 
+&amp;= I_{n-1} - \int_0^1 x\,\left(-\frac{1}{3}\right)(-3x^2)\,(1-x^3)^{n-1}\,\mathrm{d} x \end{split}\]</div>
+<p>and then integrate the second integrand by parts:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lcl}
+u(x) = x &amp;&amp; v'(x) = -\frac{1}{3} (-3x^2)(1-x^3)^{n-1}\\
+u'(x) = 1 &amp;&amp; v(x) = -\frac{1}{3n} (1-x^3)^{n}
+\end{array}\end{split}\]</div>
+<p>where we integrated <span class="math notranslate nohighlight">\(f'(x)\)</span> using the reverse chain rule.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\Rightarrow I_n &amp;= I_{n-1} - \bigg[ -\frac{x}{3n} (1-x^3)^{n}\bigg]_0^1 - \frac{1}{3n}\int_0^1  (1-x^3)^{n}\,\mathrm{d} x \\
+I_n &amp;= I_{n-1} + 0 - \frac{1}{3n}I_{n} \end{split}\]</div>
+<p>Rearranging the expression gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+I_n = \frac{3n}{3n+1}I_{n-1}
+\end{equation*}\]</div>
+<p>Applying the formula recursively gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_4 &amp;= \bigg(\frac{12}{13}\bigg)I_3 = \bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)I_2 \\
+&amp;= \bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)\bigg(\frac{6}{7}\bigg)I_1 = 
+\bigg(\frac{12}{13}\bigg)\bigg(\frac{9}{10}\bigg)\bigg(\frac{6}{7}\bigg)\bigg(\frac{3}{4}\bigg)I_0\end{split}\]</div>
+<p>Finally, noting the result for <span class="math notranslate nohighlight">\(I_0\)</span> gives the result for <span class="math notranslate nohighlight">\(I_4\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+I_0 = \int_0^1\mathrm{d} x = 1 \qquad
+\implies \qquad I_4 = \frac{243}{455} 
+\end{equation*}\]</div>
+</div>
+<div class="solution dropdown admonition">
+<p class="admonition-title">Solution to (d)</p>
+<p>Firstly break up the integrand into <span class="math notranslate nohighlight">\(\sin(x) \sin^{n-1}(x)\)</span> and then integrate by parts:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{lcl}
+u(x) = \sin^{n-1}(x) &amp;&amp; v'(x) = \sin(x) \\
+u'(x) = (n-1)\cos(x)\sin^{n-2}(x) &amp;&amp; v(x) = -\cos(x)
+\end{array}\end{split}\]</div>
+<p>and therefore:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}I_n &amp;= \bigg[-\cos(x)\sin^{n-1}(x)\bigg]_0^{\pi/2}  + (n-1)\int_0^{\pi/2}  \cos^2(x) \sin^{n-2}(x)\,\mathrm{d} x \\
+&amp;= 0 + (n-1)\int_0^{\pi/2} (1 - \sin^2(x))\sin^{n-2}(x)\,\mathrm{d} x \\
+&amp;= (n-1)\int_0^{\pi/2} \bigg(\sin^{n-2}(x) - \sin^{n}(x)\bigg)\,\mathrm{d} x  \\ 
+I_n &amp;= (n-1)I_{n-2} - (n-1)I_{n}\end{split}\]</div>
+<p>Rearranging the expression gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+I_n = \frac{n-1}{n}I_{n-2}
+\end{equation*}\]</div>
+<p>Applying the formula recursively gives</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+I_2 &amp;= \frac{1}{2}I_0 = \frac{1}{2}\bigg[x\bigg]_0^{\pi/2} = \frac{\pi}{4}\\
+I_3 &amp;= \frac{2}{3}I_1 = \left(\frac{2}{3}\right)\bigg[-\cos(x)\bigg]_0^{\pi/2} = \frac{2}{3}
+\end{align*}\]</div>
+<p>notice we evaluate <span class="math notranslate nohighlight">\(I_0\)</span> and <span class="math notranslate nohighlight">\(I_1\)</span> depending on whether <span class="math notranslate nohighlight">\(n\)</span> is odd or even.</p>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="integration.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Integration</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="sofa.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>The sofa challenge</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#substitution">5.1. Substitution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#by-parts">5.2. By parts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduction-formulae">5.3. Reduction formulae</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ella Metcalfe
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
