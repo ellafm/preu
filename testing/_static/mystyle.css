@@ -1,0 +1,69 @@
+.whatis {
+  border-color: #c566df;
+}
+
+.admonition.whatis .admonition-title:after {
+  color: #c566df;
+  font-family: "Font Awesome 5 Free";
+  content: "";
+}
+
+div.solution {
+  border-color: var(--pst-color-danger);
+  background-color: var(--pst-color-surface);
+}
+
+div.solution p.admonition-title {
+  background-color: var(--pst-color-on-surface);
+}
+
+p {
+  text-align: justify;
+}
+
+th {
+  display: none;
+  border: 0px solid;
+  height: 1px;
+}
+
+table {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+}
+
+table {
+  width: 100%;
+}
+
+td:nth-child(1) {
+  width: 10%;
+}
+
+td:nth-child(2) {
+  width: 65%;
+}
+
+td:nth-child(3) {
+  width: 15%;
+}
+
+td:nth-child(4) {
+  width: 5%;
+}
+
+td:nth-child(5) {
+  width: 5%;
+}
+
+
+body {
+  --sd-color-primary: #D5FFFF;
+  --sd-color-primary-text: #212529;
+}
+
+.item {
+  display: inline-block;
+  vertical-align: top
+}
