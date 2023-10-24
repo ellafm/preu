@@ -186,7 +186,7 @@
 :::
 
 
-:::{card} Option Modules (Group 1)
+:::{card} Option modules (Group 1)
 
 
 ||||||
@@ -198,7 +198,7 @@ You can only select 1 of these modules <br/>*highly recommended
 :::
 
 
-:::{card} Option Modules (Group 2)
+:::{card} Option modules (Group 2)
 Select 0-45 credits
 
 
@@ -245,7 +245,7 @@ Select 0-45 credits
 :::
 
 
-:::{card} Option Modules
+:::{card} Option modules
 Major stream select 15-30 credits. Minor stream select 0-15 credits 
 
 
@@ -278,7 +278,7 @@ Major stream select 15-30 credits. Minor stream select 0-15 credits
 ::::{admonition} (Biomedical Sciences) <br/>Major stream select 30-60 credits; Minor stream select 0-30 credits
 :class: whatis
 
-:::{card} Option Modules
+:::{card} Option modules
 
 
 ||||||
