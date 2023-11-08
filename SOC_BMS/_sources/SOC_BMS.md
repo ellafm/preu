@@ -42,7 +42,7 @@
 | [GEOL0007](https://www.ucl.ac.uk/module-catalogue/modules/GEOL0007) | The Earth | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=GEOL0007&acadYearFl=N) |  |
 | [HPSC0009](https://www.ucl.ac.uk/module-catalogue/modules/HPSC0009) | Introduction to History, Philosophy and Social Studies of Science | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=HPSC0009&acadYearFl=N) |  |
 | [PHAS0011](https://www.ucl.ac.uk/module-catalogue/modules/PHAS0011) | Modern Physics, Astronomy and Cosmology | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=PHAS0011&acadYearFl=N) |  |
-| [GEOL0007](https://www.ucl.ac.uk/module-catalogue/modules/GEOL0007) | The Earth | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=GEOL0007&acadYearFl=N) |  |
+| [STAT0002](https://www.ucl.ac.uk/module-catalogue/modules/STAT0002) | Introduction to Probability and Statistics | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=STAT0002&acadYearFl=N) |  |
 
 
 :::
@@ -59,7 +59,7 @@
 ||||||
 | :-- | :-- | :-- | :-- | :-- |
 | [CHEM0008](https://www.ucl.ac.uk/module-catalogue/modules/CHEM0008) | Basic Organic Chemistry | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=CHEM0008&acadYearFl=N) |  |
-| [CELL0008](https://www.ucl.ac.uk/module-catalogue/modules/CELL0008) | Introduction to Cell Biology | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=CELL0008&acadYearFl=N) |  |
+| CELLL000 | Missing info |  |  | 8 |
 | [PHOL0002](https://www.ucl.ac.uk/module-catalogue/modules/PHOL0002) | Introductory Mammalian Physiology | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=PHOL0002&acadYearFl=N) |  |
 
 
@@ -149,10 +149,10 @@
 
 ||||||
 | :-- | :-- | :-- | :-- | :-- |
-| [CHEM0020](https://www.ucl.ac.uk/module-catalogue/modules/CHEM0020) | Physical Chemistry for Life Sciences<br>*Pre-requisites: CHEM0009 | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=CHEM0020&acadYearFl=N) |  |
-| [CHEM0015](https://www.ucl.ac.uk/module-catalogue/modules/CHEM0015) | Inorganic Chemistry for Physical Science<br>*Pre-requisites: CHEM0013 | 15 credits | [T1&2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=CHEM0015&acadYearFl=N) |  |
+| [CHEM0020](https://www.ucl.ac.uk/module-catalogue/modules/CHEM0020) | Physical Chemistry for Life Sciences | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=CHEM0020&acadYearFl=N) |  |
+| [CHEM0015](https://www.ucl.ac.uk/module-catalogue/modules/CHEM0015) | Inorganic Chemistry for Physical Science | 15 credits | [T1&2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=CHEM0015&acadYearFl=N) |  |
 
-
+Must match option from Year 1 
 :::
 ::::
 
@@ -172,7 +172,7 @@
 :::
 
 
-::::{admonition} (Biomedical Sciences) <br/>Major stream select 60-75 credits; Minor stream select 30-45 credits
+::::{admonition} (Biomedical Sciences) Major stream select 60-75 credits; Minor stream select 30-45 credits
 :class: whatis
 
 :::{card} Core modules
@@ -186,7 +186,7 @@
 :::
 
 
-:::{card} Option modules (Group 1)
+:::{card} Option Modules (Group 1)
 
 
 ||||||
@@ -198,7 +198,7 @@ You can only select 1 of these modules <br/>*highly recommended
 :::
 
 
-:::{card} Option modules (Group 2)
+:::{card} Option Modules (Group 2)
 Select 0-45 credits
 
 
@@ -206,14 +206,14 @@ Select 0-45 credits
 | :-- | :-- | :-- | :-- | :-- |
 | [PHOL0006](https://www.ucl.ac.uk/module-catalogue/modules/PHOL0006) | Respiration in Health and Disease | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=PHOL0006&acadYearFl=N) |  |
 | [PHOL0007](https://www.ucl.ac.uk/module-catalogue/modules/PHOL0007) | Heart and Circulation | 30 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=PHOL0007&acadYearFl=N) |  |
-| [ANAT0008](https://www.ucl.ac.uk/module-catalogue/modules/ANAT0008) | The Neurobiology of Neurodegenerative Disease | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=ANAT0008&acadYearFl=N) |  |
-| [INIM0006](https://www.ucl.ac.uk/module-catalogue/modules/INIM0006) | Immunology in Health and Disease | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=INIM0006&acadYearFl=N) |  |
+| [ANAT0008](https://www.ucl.ac.uk/module-catalogue/modules/ANAT0008) | The Neurobiology of Neurodegenerative Disease<br>*Pre-requisites: ANAT0003 | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=ANAT0008&acadYearFl=N) |  |
+| [INIM0006](https://www.ucl.ac.uk/module-catalogue/modules/INIM0006) | Immunology in Health and Disease | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=INIM0006&acadYearFl=N) | * |
 | [PHAR0018](https://www.ucl.ac.uk/module-catalogue/modules/PHAR0018) | Synaptic Pharmacology | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=PHAR0018&acadYearFl=N) |  |
 | [NEUR0020](https://www.ucl.ac.uk/module-catalogue/modules/NEUR0020) | Integrative Systems Neuroscience | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=NEUR0020&acadYearFl=N) |  |
 | [CELL0014](https://www.ucl.ac.uk/module-catalogue/modules/CELL0014) | Dynamic Biological Systems | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=CELL0014&acadYearFl=N) |  |
 | [PHAR0014](https://www.ucl.ac.uk/module-catalogue/modules/PHAR0014) | Drug Design and Development | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=PHAR0014&acadYearFl=N) |  |
 
-
+*INIM0005 desirable
 :::
 ::::
 
@@ -245,16 +245,16 @@ Select 0-45 credits
 :::
 
 
-:::{card} Option modules
-Major stream select 15-30 credits. Minor stream select 0-15 credits 
+:::{card} Option Modules
+Major stream select 15-30 credits. Minor stream select 0-15 creditS
 
 
 ||||||
 | :-- | :-- | :-- | :-- | :-- |
 | [CHEM0033](https://www.ucl.ac.uk/module-catalogue/modules/CHEM0033) | Principles of Drug Design | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=CHEM0033&acadYearFl=N) |  |
-| [CHEM----](https://www.ucl.ac.uk/chemistry/study-here/undergraduate-degrees/undergraduate-modules) | any 3rd year chemistry module available to NatSci | 15 credits |  | * |
+| CHEM---- | Missing info |  |  | * |
 
-
+*any 3rd year chemistry module available to NatSci
 :::
 ::::
 
@@ -275,25 +275,25 @@ Major stream select 15-30 credits. Minor stream select 0-15 credits
 :::
 
 
-::::{admonition} (Biomedical Sciences) <br/>Major stream select 30-60 credits; Minor stream select 0-30 credits
+::::{admonition} (Biomedical Sciences) Major stream select 30-60 credits; Minor stream select 0-30 credits
 :class: whatis
 
-:::{card} Option modules
+:::{card} Option Modules
 
 
 ||||||
 | :-- | :-- | :-- | :-- | :-- |
 | [PHAR0010](https://www.ucl.ac.uk/module-catalogue/modules/PHAR0010) | Neuropharmacology | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=PHAR0010&acadYearFl=N) | * |
-| [CELL0018](https://www.ucl.ac.uk/module-catalogue/modules/CELL0018) | Research Techniques in Cell Biology | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=CELL0018&acadYearFl=N) |  |
+| [CELL0018](https://www.ucl.ac.uk/module-catalogue/modules/CELL0018) | Research Techniques in Cell Biology | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=CELL0018&acadYearFl=N) | ** |
 | [PHAR0019](https://www.ucl.ac.uk/module-catalogue/modules/PHAR0019) | Pharmacology of Inflammation | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=PHAR0019&acadYearFl=N) | * |
 | [ANAT0001](https://www.ucl.ac.uk/module-catalogue/modules/ANAT0001) | Introduction to Anatomy and Development | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=ANAT0001&acadYearFl=N) | 3 |
 | [PHOL0011](https://www.ucl.ac.uk/module-catalogue/modules/PHOL0011) | Autonomic and Central Control of Cardiorespiratory Function | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=PHOL0011&acadYearFl=N) |  |
-| [NEUR0016](https://www.ucl.ac.uk/module-catalogue/modules/NEUR0016) | Neural Computation: Models of Brain Function | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=NEUR0016&acadYearFl=N) |  |
+| [NEUR0016](https://www.ucl.ac.uk/module-catalogue/modules/NEUR0016) | Neural Computation: Models of Brain Function<br>*Pre-requisites: ANAT0003 | 15 credits | [T1](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=NEUR0016&acadYearFl=N) |  |
 | [NEUR0019](https://www.ucl.ac.uk/module-catalogue/modules/NEUR0019) | Foundations of Neuroinformatics | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=NEUR0019&acadYearFl=N) |  |
-| [INIM0030](https://www.ucl.ac.uk/module-catalogue/modules/INIM0030) | Immunodeficiency and Therapeutics | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=INIM0030&acadYearFl=N) |  |
-| [INIM0031](https://www.ucl.ac.uk/module-catalogue/modules/INIM0031) | The Immune System, Cancer, and its Treatment | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=INIM0031&acadYearFl=N) |  |
+| [INIM0030](https://www.ucl.ac.uk/module-catalogue/modules/INIM0030) | Immunodeficiency and Therapeutics | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=INIM0030&acadYearFl=N) | *** |
+| [INIM0031](https://www.ucl.ac.uk/module-catalogue/modules/INIM0031) | The Immune System, Cancer, and its Treatment | 15 credits | [T2](https://timetable.ucl.ac.uk/tt/moduleTimet.do?firstReq=Y&moduleId=INIM0031&acadYearFl=N) | **** |
 
-*highly recommended
+*highly recommended<br/>**contact module organiser to discuss availability<br/>***INIM0006 and INIM0006 desirable<br/>****INIM0005 desirable
 :::
 ::::
 
